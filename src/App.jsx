@@ -1,14 +1,12 @@
-import { useState } from 'react'
-
 import './App.css'
+import React, { useState } from 'react' 
+import {RouterProvider} from 'react-router-dom'
+import {routers} from './app/api.jsx'
 
-function App() {
 
-  return (
-    <>
-     
-    </>
-  )
+const App = () => {
+ 
+  return <RouterProvider router={routers} />
 }
 
 export default App
