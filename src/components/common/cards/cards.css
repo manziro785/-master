@@ -1,0 +1,47 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;   
+
+}
+.card1 {
+    margin-right: 25px;
+    transition: all 0.3s ease;
+
+}
+.card3 {
+    margin-left: 25px;
+    transition: all 0.3s ease;
+
+}
+.card2 {
+    transition: all 0.3s ease;
+
+}
+.card3:hover  {
+margin-top: -30px;
+}
+.card1:hover {
+margin-top: -30px;
+}
+.card2:hover {
+    margin-top: -30px;
+
+}
+.link-test {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 23;
+    color: #62A0A6;
+    padding: 18px 65px;
+    text-decoration: none;
+    background-color: #2F5B78;
+    /* margin-left: 40px; */
+    border-radius: 60px;
+position: relative;
+top: 70px;
+transition: all 0.5s ease;
+}
+.link-test:hover {
+    background-color: #23455c;
+}

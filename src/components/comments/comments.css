@@ -1,0 +1,37 @@
+.photo {
+    margin: 14px;
+    width: 28%;
+    transition: all 0.3s ease;
+    filter: brightness(80%); 
+}
+  
+  .photo.active {
+    width: 35%;   
+    filter: brightness(100%); 
+
+}
+.photo-container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* margin-top: 100px; */
+    height: 700px;
+}
+.title-comments {
+    color: #76DAE3;
+    font-size: 52px;
+    font-weight: 500;
+    font-style: italic;
+    display: flex;
+    margin-right: 20px;
+    margin-top: 200px;
+}
+.title-comments::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #185256;
+    transform: rotate(90deg);
+    margin-top: 30px;
+}

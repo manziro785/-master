@@ -1,0 +1,37 @@
+.video {
+    background-color: #2240537e;
+    margin-top: 200px;
+    }
+    .title-video {
+        margin-left: 20px;
+        padding-top: 34px;
+        font-size: 40px;
+        color: #0f354d;
+        font-weight: 500;
+        display: flex;
+    }
+    .title-video::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background-color:#2f81b4;
+        transform: rotate(90deg);
+        margin-top: 25px;
+    }
+    .gallery {
+        width: 100%;
+        overflow-x: auto; 
+        white-space: nowrap;
+        margin-top: 100px;
+        padding-bottom: 40px;
+    }
+    .gallery img {
+      height: auto; 
+      display: inline-block; 
+      margin-left: 20px; 
+    }
+    
+    .gallery::-webkit-scrollbar {
+        display: none; 
+      }

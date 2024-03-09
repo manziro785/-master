@@ -1,0 +1,45 @@
+.header {
+    background-color: #4e87d286;
+    height: 80px;
+    display: flex;
+    z-index: 3;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #3F799E;
+}
+.logo-main {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    margin-top: 10px;
+    
+}
+.btn-head {
+    height: fit-content;
+    margin-left: 70px;
+    background:none;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #EEFEFF;
+    transition: all 0.3s ease;
+}
+.btn-head:hover {
+    color:#bde1e3
+}
+.autor {
+    margin-left: 50px;
+}
+.logo {
+    margin-top: 10px;
+}
