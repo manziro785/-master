@@ -4,6 +4,7 @@ import  {NoPage}  from '../pages/nopage/nopage.jsx';
 import  {RegisterPage}  from '../pages/auth/registerPage/registerPage.jsx';
 import  {AuthPage}  from '../pages/auth/authPage/authPage.jsx';
 import  {ProfilePage}  from '../pages/profile/profile.jsx';
+import  {TestPage } from '../pages/testPage/testPage.jsx';
 
 
 export const routers = createBrowserRouter([
@@ -23,6 +24,10 @@ export const routers = createBrowserRouter([
   {
     path: '/profile',
     element: <ProfilePage />
+  },
+  {
+    path: '/test',
+    element: <TestPage />
   },
   {
     path: '/*',
