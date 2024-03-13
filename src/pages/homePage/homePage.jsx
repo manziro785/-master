@@ -8,18 +8,19 @@ import Video from '../../components/common/video/video'
 import Aboutus from '../../components/aboutus/aboutus'
 import Comments from '../../components/comments/comments'
 import Footer from '../../components/footer/footer'
+import TemplatePage from "../../components/TemplatePage.jsx";
 
 export  function HomePage() {
   return (
     <>
-    <Header/>
-    <Banner/>
-    <Cards/>
-    <Info/>
-    <Video/>
-    <Aboutus/>
-    <Comments/>
-    <Footer/>
+      <TemplatePage>
+        <Banner/>
+        <Cards/>
+        <Info/>
+        <Video/>
+        <Aboutus/>
+        <Comments/>
+      </TemplatePage>
     </>
   )
 }
