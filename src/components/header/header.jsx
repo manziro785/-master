@@ -1,8 +1,12 @@
-import {React, useEffect, useState} from "react";
+import React, { useEffect, useState, useContext} from "react";
 import './headerModule.css'
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../App";
 
 
 export function Header() {
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+
   const scrollToTop = () => {
     const scrollStep = -window.scrollY / (1000 / 15);
 
@@ -43,20 +47,54 @@ export function Header() {
     }
   };
 
+  function logout (event) {
+    console.log("Вызвана функция logout");
+    
+    localStorage.removeItem('access')
+    localStorage.removeItem('refresh')
+
+    setIsAuth(false)
+
+  }
   return (
     <>
           <div className="header">
-        <div className="logo">
+          <NavLink to='/' className="logo">
             <img src="./src/assets/header/ОРТмастер (2).svg" alt="" className="logo-main" />
-        </div>
+        </NavLink>
         <div className="navbar">
             <button className="btn-head" > Главная</button>
             <button className="btn-head" onClick={() => scrollToElement(document.getElementById('team'), 1000)}>О нас</button>
             <a href="/test" className="btn-head">Тест</a>
             <button className="btn-head"onClick={() => scrollToElement(document.getElementById('end'), 1000)}>Контакты</button>   
-            <div className="autor">
-                <img src="./src/assets/header/icon (2).svg" alt="" />
-            </div> 
+           
+           
+          {!isAuth && ( <div className="custom-tooltip">
+              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
+                <div className="tooltiptext">
+                  
+                  <button className="log-in" onClick={logout}>
+                    Выйти
+                  </button>
+                  
+                </div>
+          </div>)}
+          {isAuth && ( <div className="custom-tooltip">
+              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
+                <div className="tooltiptext">
+                 <NavLink to='registration'>
+                  <button className="sign-up">
+                    Зарегаться
+                  </button>
+                  </NavLink>
+                  <NavLink to='login'>
+                  <button className="log-in">
+                    Войти
+                  </button>
+                  </NavLink>
+                </div>
+          </div>)}
+        
         </div>
     </div>
     </>
