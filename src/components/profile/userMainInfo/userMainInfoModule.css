@@ -1,0 +1,44 @@
+.nickname {
+    width: 150px;
+    color: #DEDEDE;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: right;
+    margin-left: 38px;
+}
+.nickname-info, .nickname-info-bio {
+    font-size: 23px;
+    color: #ffff;
+    margin-left: 87px;
+    font-weight: 500;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+
+}
+.nickname-info::after {
+    display: block;
+    content: '';
+    width: 377px;
+    height: 0.4px;
+    background-color: #87AFC9;
+    margin-top: 32px;
+
+
+}
+.nickname-box, .nickname-box-bio {
+    display: flex;
+    margin-bottom: 37px;
+    position: relative;
+}
+.nickname-info-bio::after {
+    display: block;
+    content: '';
+    width: 636px;
+    height: 1px;
+    background-color: #87AFC9;
+    margin-top: 32px;
+    position: absolute;
+    left: 58px;
+    bottom: -100px;
+}
