@@ -1,0 +1,13 @@
+.awards-box {
+    width: 765px;
+    min-height: 375px;
+    background-color: #296388;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 90px;
+    margin-left: 110px;
+
+}
+.title-awards-box {
+
+}

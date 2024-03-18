@@ -1,0 +1,17 @@
+.active-box {
+    width: 399px;
+    min-height: 489px;
+    background-color: #296388;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 90px;
+    margin-left: 80px;
+
+}
+.title-active-box {
+    font-size: 26px;
+    font-weight: 400px;
+    font-style: italic;
+    color: #FFFFFF;
+    padding: 20px 29px;
+}
