@@ -41,6 +41,7 @@ export function ProfilePage() {
 <Active/> 
 {/* <img src="./src/assets/profile/Frame 40.svg" alt="" className='dostizh1' /> */}
 
+
     </div>
     </div>
     </>

@@ -15,6 +15,7 @@ export default function UserInfo() {
         </div>
         </div>
         <Avatar/>
+        
        <UserMainInfo/>
     </div>
     </>

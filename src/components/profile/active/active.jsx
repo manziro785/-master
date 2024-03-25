@@ -7,6 +7,7 @@ export default function Active() {
     <div className="active-box">
       <div className="title-active-box">
       Активность
+    
       </div>
     </div>
     </>
