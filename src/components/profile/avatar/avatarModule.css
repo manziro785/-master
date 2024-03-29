@@ -1,0 +1,50 @@
+.title-avatar-profile {
+    color: #CFCFCF;
+    font-size: 23px;
+    font-weight: 400;
+    margin-left: 130px;
+}
+.change-img-profile {
+    color: #E2E2E2;
+    border: 1px solid #E2E2E2;
+    font-size: 21px;
+    padding: 7px 14px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.change-img-profile:hover {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+
+}
+.del-img-profile {
+    color: #B41A1A;
+    font-size: 21px;
+    cursor: pointer;
+    margin-top: 23px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+.del-img-profile:hover {
+    color: #d21d1d;
+
+}
+.img-avatar-profile {
+    display: flex;
+    margin-left: 88px;
+}
+.avatar-profile{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 44px;
+}
+.btns-img-profile {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}

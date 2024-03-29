@@ -1,0 +1,43 @@
+.user-info-box {
+    width: 765px;
+    min-height: 986px;
+    background-color: #296388;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-left: 110px;
+    margin-top: 90px;
+}
+.header-user-info {
+    color: #ffff;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 500;
+    display: flex;
+    padding: 34px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.btn-save {
+position: absolute;
+right: 28px;
+color: #1B3C51;
+padding: 8px 17px;
+background-color: #4780B8;
+margin-top: -10px;
+cursor: pointer;
+transition: all 0.4s ease;
+
+
+}
+.btn-save:hover {
+    background-color: #3b6fa3;
+
+}
+.header-user-info::after {
+    background-color : #87AFC9;
+    display: block;
+    content:'';
+    height: 1px;
+    width: 636px;
+margin-top: 25px;
+}

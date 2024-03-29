@@ -5,7 +5,7 @@ import { AuthContext } from "../../App";
 
 
 export function Header() {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
+  const [isAuth, setIsAuth] = React.useContext(AuthContext);
 
   const scrollToTop = () => {
     const scrollStep = -window.scrollY / (1000 / 15);
@@ -47,14 +47,10 @@ export function Header() {
     }
   };
 
-  function logout (event) {
-    console.log("Вызвана функция logout");
-    
+  function logout(event) {
+    setIsAuth(false)
     localStorage.removeItem('access')
     localStorage.removeItem('refresh')
-
-    setIsAuth(false)
-
   }
   return (
     <>
@@ -69,17 +65,8 @@ export function Header() {
             <button className="btn-head"onClick={() => scrollToElement(document.getElementById('end'), 1000)}>Контакты</button>   
            
            
+          
           {!isAuth && ( <div className="custom-tooltip">
-              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
-                <div className="tooltiptext">
-                  
-                  <button className="log-in" onClick={logout}>
-                    Выйти
-                  </button>
-                  
-                </div>
-          </div>)}
-          {isAuth && ( <div className="custom-tooltip">
               <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
                 <div className="tooltiptext">
                  <NavLink to='registration'>
@@ -94,7 +81,16 @@ export function Header() {
                   </NavLink>
                 </div>
           </div>)}
-        
+          {isAuth && ( <div className="custom-tooltip">
+              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
+                <div className="tooltiptext">
+                  
+                  <button className="log-in" onClick={logout}>
+                    Выйти
+                  </button>
+                  
+                </div>
+          </div>)}
         </div>
     </div>
     </>
