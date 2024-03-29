@@ -8,7 +8,7 @@ import Active from '../../components/profile/active/active.jsx'
 export function ProfilePage() {
   return (
     <>
-     <div className="header">
+         <div className="header">
         <NavLink to='/' className="logo">
             <img src="./src/assets/header/ОРТмастер (2).svg" alt="" className="logo-main" />
         </NavLink>

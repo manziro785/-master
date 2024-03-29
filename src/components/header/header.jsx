@@ -69,7 +69,7 @@ export function Header() {
           {!isAuth && ( <div className="custom-tooltip">
               <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
                 <div className="tooltiptext">
-                 <NavLink to='registration'>
+                 <NavLink to='register'>
                   <button className="sign-up">
                     Зарегаться
                   </button>

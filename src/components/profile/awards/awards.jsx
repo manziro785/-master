@@ -7,7 +7,7 @@ export default function Awards() {
     
     <div className="awards-box">
       <div className="title-active-box">
-      Достижения
+      достижения
       </div>
     </div>
     </>
