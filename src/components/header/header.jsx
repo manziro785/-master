@@ -51,7 +51,9 @@ export function Header() {
     setIsAuth(false)
     localStorage.removeItem('access')
     localStorage.removeItem('refresh')
+    window.location.reload(); 
   }
+  
   return (
     <>
           <div className="header">
@@ -88,6 +90,11 @@ export function Header() {
                   <button className="log-in" onClick={logout}>
                     Выйти
                   </button>
+                  <NavLink to = '/profile'>
+                  <button className="profile_btn" >
+                    Профиль
+                  </button>
+                  </NavLink>
                   
                 </div>
           </div>)}

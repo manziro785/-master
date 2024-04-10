@@ -5,7 +5,10 @@ body {
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> merging_from_akbar
 .header1 {
     background-color: #5b92d8;
     height: 80px;
@@ -123,4 +126,8 @@ body {
 }
 .auth-wrapper {
     display: flex;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> merging_from_akbar

@@ -39,6 +39,7 @@ async function sendData(event) {
   })
   .catch(error => {
     console.log(error)
+    alert('Login error')
 
   } );
 }
@@ -91,7 +92,7 @@ function setPasswordUser (event) {
           </form>
           <div className="relink-reg">
           У вас нет аккаунта? 
-          <NavLink to='' className="btn-regis">
+          <NavLink to='/register' className="btn-regis">
           Зарегаться
           </NavLink>
           </div>

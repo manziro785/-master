@@ -2,8 +2,6 @@ import React from 'react'
 import './userInfoModule.css'
 import Avatar from '../avatar/avatar.jsx'
 import UserMainInfo from '../userMainInfo/userMainInfo.jsx'
-
-
 export default function UserInfo() {
   return (
     <>
@@ -11,7 +9,7 @@ export default function UserInfo() {
         <div className="header-user-info">
         Профиль
         <div className="btn-save">
-        Сохранить
+        Изменить
         </div>
         </div>
         <Avatar/>
