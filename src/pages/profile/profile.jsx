@@ -38,11 +38,11 @@ export function ProfilePage() {
     <div className="left-wrapper-profile">
     <UserInfo/>
     <Awards/>
-    <img src="./src/assets/profile/Frame 43.svg" alt="" className='dostizh' />
+    {/* <img src="./src/assets/profile/Frame 43.svg" alt="" className='dostizh' /> */}
     </div>
     <div className="right-wrapper-profile">
 <Active/> 
-<img src="./src/assets/profile/Frame 40.svg" alt="" className='dostizh1' />
+{/* <img src="./src/assets/profile/Frame 40.svg" alt="" className='dostizh1' /> */}
 
     </div>
     </div>
