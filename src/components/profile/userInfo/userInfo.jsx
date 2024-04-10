@@ -9,7 +9,7 @@ export default function UserInfo() {
         <div className="header-user-info">
         Профиль
         <div className="btn-save">
-        Сохранить
+        Изменить
         </div>
         </div>
         <Avatar/>

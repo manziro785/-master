@@ -51,7 +51,9 @@ export function Header() {
     setIsAuth(false)
     localStorage.removeItem('access')
     localStorage.removeItem('refresh')
+    window.location.reload(); 
   }
+  
   return (
     <>
           <div className="header">
@@ -69,7 +71,7 @@ export function Header() {
           {!isAuth && ( <div className="custom-tooltip">
               <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
                 <div className="tooltiptext">
-                 <NavLink to='registration'>
+                 <NavLink to='register'>
                   <button className="sign-up">
                     Зарегаться
                   </button>
@@ -88,6 +90,11 @@ export function Header() {
                   <button className="log-in" onClick={logout}>
                     Выйти
                   </button>
+                  <NavLink to = '/profile'>
+                  <button className="profile_btn" >
+                    Профиль
+                  </button>
+                  </NavLink>
                   
                 </div>
           </div>)}

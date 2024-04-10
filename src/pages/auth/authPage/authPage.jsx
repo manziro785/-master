@@ -39,6 +39,7 @@ async function sendData(event) {
   })
   .catch(error => {
     console.log(error)
+    alert('Login error')
 
   } );
 }

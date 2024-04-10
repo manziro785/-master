@@ -6,6 +6,13 @@ import Awards from '../../components/profile/awards/awards.jsx'
 import Active from '../../components/profile/active/active.jsx'
 
 export function ProfilePage() {
+
+    function logout(event) {
+        setIsAuth(false)
+        localStorage.removeItem('access')
+        localStorage.removeItem('refresh')
+        window.location.reload(); 
+      }
     return (
         <>
             <div className="header">
@@ -16,14 +23,10 @@ export function ProfilePage() {
                     <div className="custom-tooltip">
                         <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
                         <div className="tooltiptext">
-                            <NavLink to='registration'>
-                                <button className="sign-up">
-                                    Зарегаться
-                                </button>
-                            </NavLink>
+                            
                             <NavLink to='login'>
-                                <button className="log-in">
-                                    Войти
+                                <button className="log-in" onClick={logout}>
+                                    Выйти
                                 </button>
                             </NavLink>
                         </div>
