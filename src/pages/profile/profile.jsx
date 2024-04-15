@@ -4,8 +4,11 @@ import UserInfo from '../../components/profile/userInfo/userInfo.jsx'
 import { NavLink } from 'react-router-dom'
 import Awards from '../../components/profile/awards/awards.jsx'
 import Active from '../../components/profile/active/active.jsx'
+import {UserContext} from '../../App'
 
 export function ProfilePage() {
+
+    const [user, setUser] = React.useContext(UserContext)
 
     function logout(event) {
         setIsAuth(false)
