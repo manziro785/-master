@@ -37,6 +37,7 @@ body {
 }
 .form-auth {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-left: 48px;
     margin-top: 30px;
@@ -55,9 +56,7 @@ body {
     color: #ffff;
 
 }
-.btn-auth {
-    width: fit-content;
-}
+
 .input-auth::placeholder {
     font-weight: 200;
     color: #BDDDDF;
@@ -65,9 +64,9 @@ body {
     padding-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-.btn-auth {
-    width: 300px;
-    height: 57px;
+.btn-reg {
+    width: max-content;
+    height: 70px;
     border:2px solid #163452;
     background: none;
     color: #163452;
@@ -79,7 +78,6 @@ body {
     margin-top: 85px;
     display: flex;
     margin-left: 80px;
-    display: flex;
     justify-content: center;
 }
 
@@ -110,10 +108,9 @@ body {
 }
 
 .auth-box{
-    /* width: 740px; */
+
     flex: 1;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    /* display:flex */
     z-index: 1;
 
 }
