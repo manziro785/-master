@@ -1,142 +1,88 @@
 .header {
-    background-color: #4e87d286;
+    background-color: #4699FF;
     height: 80px;
     display: flex;
     z-index: 3;
     position: relative;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
 }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #3F799E;
+    background-color: #ffff;
 }
-.logo-main {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.navbar {
+
+/* .navbar {
     display: flex;
     align-items: center;
     position: absolute;
     right: 30px;
-    margin-top: 10px;
+    margin-top: 10px; */
     
-}
-.btn-head {
+
+/* .btn-head {
     height: fit-content;
     margin-left: 70px;
     background:none;
     border: none;
     text-decoration: none;
     font-size: 20px;
-    color: #EEFEFF;
-    transition: all 0.3s ease;
+    color: #000000;
+    font-weight: 500;
+    transition: font-weight 0.5s ease;
 }
 .btn-head:hover {
-    color:#bde1e3
-}
+    font-weight: 600;
+    color: #651e1e;
+
+} */
 .autor {
     margin-left: 50px;
 }
 .logo {
     margin-top: 10px;
+    margin-left: 80px;
 }
 
-.custom-tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-
-  }
-  
-  .custom-tooltip .mini-photo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-left: 30px;
-    z-index: 10;
-  }
-  
-  .custom-tooltip .tooltiptext {
-    visibility: hidden;
-    width: 170px;
-    background-color: #506b90c2;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 10;
-    top: 100%;
-    left: 10%;
-    margin-left: -95px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-
-  .custom-tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto; 
-    
-
-  }
-.tooltiptext {
-    display: flex;
-    flex-direction: column ;
-    z-index: 10 ;
-    position: relative;
-    background:none
-}
-.sign-up, .profile_btn {
-        display: inline-block;
-        color: rgb(255, 255, 255);
-        font-size: 23px;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        border: 2px solid #ffffff;
-        border-radius: 89px;
-        padding: 10px 15px;
-        position: relative;
-        font-weight: lighter;
-        transition: all 0.5s ease;
-        margin-top: 20px;
-        background: none;
-        font-weight: 400;
-
-}
-.profile_btn {
-    padding: 10px 25px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-.sign-up:hover, .log-in:hover, .profile_btn:hover {
-
-    /* background-color:#045C24; */
-    color:rgb(40, 113, 152);
-    /* border-color: black; */
-    background-color:#fff;
-    font-weight: 400;
-
-}
-.log-in {
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    font-size: 23px;
+.test-btn-header, .login-btn-header {
+    color:#000000;
+    font-size: 20px;
+    font-weight: 700;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid #ffffff;
-    border-radius: 89px;
-    padding: 10px 42px;
-    position: relative;
-    font-weight: lighter;
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    background-color: #47FFBF;
     transition: all 0.5s ease;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background: none;
-    font-weight: 400;
+}
+.test-btn-header {
+    background-color: #47FFBF;
+}
+.test-btn-header:hover {
+    background-color: #2FC792;
+
+}
+.login-btn-header {
+    background-color: #47ffbf00;
+
+}
+.login-btn-header:hover {
+    background-color: #47FFBF;
+
+}
+
+
+.btns-header {
+    position: absolute;
+    right: 80px;
+    padding-top: 15px;
+display: flex;
+align-items:center
+
+}
+.navbar {
 
 }

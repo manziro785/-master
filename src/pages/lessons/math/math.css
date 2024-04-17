@@ -1,0 +1,114 @@
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+  }
+  .navbarr {
+    position: absolute;
+    right: 80px;
+  }
+  
+  .custom-tooltip .mini-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+    z-index: 10;
+  }
+  
+  .custom-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #3a84e0;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 10%;
+    margin-left: -55px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+
+  .custom-tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto; 
+    
+
+  }
+.tooltiptext {
+    display: flex;
+    flex-direction: column !important;
+    z-index: 10 !important;
+    position: relative;
+    background:none
+}
+.sign-up {
+        display: inline-block;
+        color:#000000;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    margin-top: 13px;
+    box-sizing: border-box;
+    background-color: #47FFBF;
+    transition: all 0.5s ease;
+    
+
+}
+.sign-up:hover  {
+    background-color:#2FC792;
+}
+.log-in:hover{
+    background-color:#47FFBF;
+
+}
+.log-in {
+    display: inline-block;
+    color:#000000;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 32px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #47ffbf00;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.title-math {
+    color: #0F0A1D;
+    font-weight: 800;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 45px;
+}
+
+.problems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 85px;
+    max-width: 1150px;
+    margin-left: 50px;
+}
+.problem1 {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    
+}

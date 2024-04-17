@@ -1,31 +1,32 @@
-import {React, useEffect, useState} from "react";
+import React from "react";
 import './bannerModule.css'
+import Bannerimg from "../../../assets/common/Frame 30 (2).svg"
 
 export  function Banner() {
-  const images = ['./src/assets/common/image 6 (1).svg', './src/assets/common/image 11 (1).svg', './src/assets/common/image 12 (1).svg'];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-useEffect(() => {
-  const intervalId = setInterval(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  }, 5000);
-
-  return () => clearInterval(intervalId);
-}, []);
+ 
   return (
     <>
+    <div className="mega-wrapper">
+
+   
       <div className="container">
-    <div className="banner">
-     <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} className="img-banner"/>
-     <div className="title">
-        <div className="title-bann">
-        ОРТ Легко и Бесплатно
-        </div>
-        <div className="subt-bann">
-        Вместе к Знаниям, Шаг за Шагом
-        </div>
-     </div>
+        <div className="left-banner">
+    <div className="title-banner">
+    Вместе к <span className="title-span">Знаниям</span>, Шаг за Шагом
+    </div>
+    <div className="subtitle-banner">
+    ОРТ <span className="subt-span">Легко</span> и <br/><span className="subt-span">Бесплатно!</span>
+    </div>
+    <div className="info-banner">
+    Проверь свои знания с нашим пробным тестом для ОРТ. Это быстро, просто и абсолютно бесплатно. Узнай, где ты стоишь в своей подготовке и какие темы требуют дополнительного внимания. Подготовься к экзамену шаг за шагом с нашей поддержкой!
+    </div>
+    <div className="btn-check">
+    Проверить
+    </div>
+    </div>
+    <div className="right-banner">
+      <img src={Bannerimg} alt="" />
+    </div>
     </div>
     </div>
     </>

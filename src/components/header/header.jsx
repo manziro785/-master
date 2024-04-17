@@ -58,48 +58,24 @@ export function Header() {
     <>
           <div className="header">
           <NavLink to='/' className="logo">
-            <img src="./src/assets/header/ОРТмастер (2).svg" alt="" className="logo-main" />
+            <img src="./src/assets/header/logo (8).svg" alt="" className="logo-main" />
         </NavLink>
-        <div className="navbar">
-            <button className="btn-head" > Главная</button>
-            <button className="btn-head" onClick={() => scrollToElement(document.getElementById('team'), 1000)}>О нас</button>
-            <a href="/test" className="btn-head">Тест</a>
-            <button className="btn-head"onClick={() => scrollToElement(document.getElementById('end'), 1000)}>Контакты</button>   
            
            
           
-          {!isAuth && ( <div className="custom-tooltip">
-              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
-                <div className="tooltiptext">
-                 <NavLink to='register'>
-                  <button className="sign-up">
-                    Зарегаться
-                  </button>
-                  </NavLink>
-                  <NavLink to='login'>
-                  <button className="log-in">
-                    Войти
-                  </button>
-                  </NavLink>
-                </div>
-          </div>)}
-          {isAuth && ( <div className="custom-tooltip">
-              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
-                <div className="tooltiptext">
-                  
-                  <button className="log-in" onClick={logout}>
-                    Выйти
-                  </button>
-                  <NavLink to = '/profile'>
-                  <button className="profile_btn" >
-                    Профиль
-                  </button>
-                  </NavLink>
-                  
-                </div>
-          </div>)}
+          {!isAuth && (
+            <div className="btns-header">
+              <a href="/test" className="test-btn-header">Тесты</a>
+              <a href="/login"className="login-btn-header">Войти</a>
+            </div>
+              )}
+          {isAuth && ( 
+            <div className="btns-header">
+              <a href="/test"className="test-btn-header">Тесты</a>
+              <a href="/login"className="login-btn-header">Выйти</a>
+            </div>
+              )}
         </div>
-    </div>
     </>
   )
 }

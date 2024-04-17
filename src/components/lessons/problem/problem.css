@@ -1,0 +1,63 @@
+.problem1 {
+    background-color: #4699FF;
+    color: #0F0A1D;
+    width: 273px;
+    height: 217px;
+    border: 2px solid #0F0A1D;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.problem1:hover {
+    background-color: #3e7ece;
+
+}
+.title-problem {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    
+
+}
+.solved, .grade {
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.solved {
+    margin-top: 30px;
+}
+.grade {
+    margin-top: 20px;
+}
+
+.wrapper-problems {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center
+
+}
+.btn-random {
+    font-size: 40px;
+    font-weight: 700;
+    color:#0F0A1D;
+    background-color: #47FFBF;
+    height: fit-content;
+    border: 2px solid #0F0A1D;
+    border-radius: 24px;
+    width: fit-content;
+    padding: 15px 29px;
+    margin-top: 100px;
+    cursor: pointer;
+    margin-bottom: 90px;
+    transition: all 0.4s ease;
+}
+
+.btn-random:hover {
+    background-color: #3bd29d;
+
+}

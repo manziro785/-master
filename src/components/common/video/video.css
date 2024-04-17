@@ -1,5 +1,5 @@
 .video {
-    background-color: #2240537e;
+    background-color: #4699FF;
     margin-top: 200px;
     }
     .title-video {
@@ -35,3 +35,11 @@
     .gallery::-webkit-scrollbar {
         display: none; 
       }
+
+.subt-name-video {
+
+}
+.img-video1 {
+    width: fit-content;
+    margin-right: 50px;
+}

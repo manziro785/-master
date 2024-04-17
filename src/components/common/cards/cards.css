@@ -1,17 +1,19 @@
 .cards {
     display: flex;
-    justify-content: center;
-    margin-top: 500px;   
+    justify-content: space-around;
+margin-top: 100px;
+flex-wrap: wrap;
 
 }
 .card1 {
-    margin-right: 25px;
+    margin-left: 55px;
     transition: all 0.3s ease;
 
 }
+
 .card3 {
-    margin-left: 25px;
     transition: all 0.3s ease;
+    margin-right: 55px;
 
 }
 .card2 {
@@ -28,20 +30,4 @@ margin-top: -30px;
     margin-top: -30px;
 
 }
-.link-test {
-    font-weight: 600;
-    font-style: normal;
-    font-size: 23;
-    color: #62A0A6;
-    padding: 18px 65px;
-    text-decoration: none;
-    background-color: #2F5B78;
-    /* margin-left: 40px; */
-    border-radius: 60px;
-position: relative;
-top: 70px;
-transition: all 0.5s ease;
-}
-.link-test:hover {
-    background-color: #23455c;
-}
+
