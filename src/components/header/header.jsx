@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext} from "react";
+import React from "react";
 import './headerModule.css'
-import { NavLink } from "react-router-dom";
-import { AuthContext } from "../../App";
+import {NavLink} from "react-router-dom";
+import {AuthContext} from "../../App";
 
 
 export function Header() {
@@ -53,15 +53,13 @@ export function Header() {
     localStorage.removeItem('refresh')
     window.location.reload(); 
   }
-  
+
   return (
     <>
           <div className="header">
           <NavLink to='/' className="logo">
             <img src="./src/assets/header/logo (8).svg" alt="" className="logo-main" />
         </NavLink>
-           
-           
           
           {!isAuth && (
             <div className="btns-header">

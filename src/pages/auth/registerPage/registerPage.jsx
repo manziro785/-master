@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import React from 'react';
+import {Link, NavLink} from 'react-router-dom';
+import {useForm} from 'react-hook-form';
 import axios from 'axios';
-import TemplatePage from '../../../components/TemplatePage.jsx';
 import './registerPageModule.css';
 
 
@@ -23,8 +22,15 @@ const RegisterPage = () => {
   };
 
   return (
-      <TemplatePage>
-        <div className="register-page">
+      <>
+      <div className="header1">
+        <NavLink to='/' className="logo">
+          <img src="../../../../src/assets/header/ОРТмастер%20(2).svg" alt="" className="logo-main" />
+        </NavLink>
+        <div className="navbar">
+        </div>
+      </div>
+        <div className="form-auth">
           <h1>Регистрация</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>
@@ -87,14 +93,15 @@ const RegisterPage = () => {
             </label>
             <br />
 
-            <button type="submit" className="btn-auth">Зарегистрироваться</button>
+            <button type="submit" className="btn-reg">Регистрация</button>
           </form>
 
           <p>
-            Уже есть аккаунт? <Link to="/login">Авторизация</Link>
+            Уже есть аккаунт? <Link to="/login" style={{textDecoration:'none'}}>Авторизация</Link>
           </p>
         </div>
-      </TemplatePage>
+      </>
+
   );
 };
 

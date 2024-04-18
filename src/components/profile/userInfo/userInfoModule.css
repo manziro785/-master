@@ -41,14 +41,16 @@ transition: all 0.4s ease;
     width: 636px;
 margin-top: 25px;
 }
+
 .wrapper-userinfo {
-    background-color:rgb(96, 142, 183)
+    background-color: rgb(96, 142, 183)
 }
+
 .modal {
     position: fixed;
     z-index: 20;
-    top:15%;
-    left:30%;
+    top: 15%;
+    left: 30%;
     /* position: relative; */
     background-color: rgb(23, 74, 119); /* Цвет фона модального окна */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Тень */

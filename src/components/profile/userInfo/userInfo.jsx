@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import './userInfoModule.css'
 import Avatar from '../avatar/avatar.jsx'
 import UserMainInfo from '../userMainInfo/userMainInfo.jsx'
-import { UserContext } from '../../../App'
+import {UserContext} from '../../../App'
 import axios from 'axios';
 
 
@@ -13,7 +13,6 @@ export default function UserInfo() {
     const [editedLocation, setEditedLocation] = useState('');
     const [editedAge, setEditedAge] = useState('');
     const [editedBio, setEditedBio] = useState('');
-
 
 
     //   const openModal = () => {
@@ -46,14 +45,12 @@ export default function UserInfo() {
     };
 
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         if (name === 'location') {
             setEditedLocation(value);
-        }
-        else if (name === 'age') {
+        } else if (name === 'age') {
             setEditedAge(value);
-        }
-        else if (name === 'bio') {
+        } else if (name === 'bio') {
             setEditedBio(value);
         }
         setEditableUser(prevUser => ({
@@ -61,8 +58,6 @@ export default function UserInfo() {
             [name]: value
         }));
     };
-
-
 
 
     const handleSaveChanges = async () => {
@@ -76,7 +71,7 @@ export default function UserInfo() {
         try {
             axios.defaults.headers.common['Authorization'] = 'Bearer ' + access;
             let res = await axios.post('http://217.151.230.35:545/api/v1/regauth/user/<int:pk>/', {
-            newUsername: editableUser.username
+                newUsername: editableUser.username
             });
 
             setUser(editableUser);
@@ -125,9 +120,9 @@ export default function UserInfo() {
                         Изменить
                     </div>
                 </div>
-                <Avatar />
+                <Avatar/>
 
-                <UserMainInfo />
+                <UserMainInfo/>
 
             </div>
             {isModalOpen && (
@@ -173,7 +168,8 @@ export default function UserInfo() {
                                     <div className="nickname">
                                         Location
                                     </div>
-                                    <div className={`nickname-info ${user.location === 'не указано' ? 'red-text' : ''}`}>
+                                    <div
+                                        className={`nickname-info ${user.location === 'не указано' ? 'red-text' : ''}`}>
                                         {editableUser && (
                                             <input
                                                 type="text"
@@ -196,7 +192,7 @@ export default function UserInfo() {
                                                 value={editedAge || ''}
                                                 onChange={handleInputChange}
                                             />
-                                        )}                     
+                                        )}
                                     </div>
                                 </div>
                                 <div className="nickname-box-bio">
@@ -211,10 +207,10 @@ export default function UserInfo() {
                                                 value={editedBio || ''}
                                                 onChange={handleInputChange}
                                             />
-                                        )}                                           
+                                        )}
                                     </div>
                                 </div>
-                            </div>    
+                            </div>
                         </div>
                     </div>
                 </div>

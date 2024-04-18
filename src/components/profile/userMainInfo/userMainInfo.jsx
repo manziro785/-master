@@ -25,33 +25,33 @@ export default function UserMainInfo() {
                         Email
                     </div>
                     <div className="nickname-info">
-                    {user.email}
-                                </div>
+                        {user.email}
+                    </div>
                 </div>
                 <div className="nickname-box">
                     <div className="nickname">
                         Location
                     </div>
                     <div className="nickname-info">
-                    {user.location|| "не указано"}
+                        {user.location || "не указано"}
                     </div>
                 </div>
                 <div className="nickname-box">
                     <div className="nickname">
-                     Birth date
-                    
-                        </div>
+                        Birth date
+
+                    </div>
                     <div className="nickname-info">
-                    {user.age || "не указано" }
-                     </div>
+                        {user.age || "не указано"}
+                    </div>
                 </div>
                 <div className="nickname-box-bio">
                     <div className="nickname">
                         Bio
                     </div>
                     <div className="nickname-info-bio">
-                    {user.bio|| "не указано"}
-                         </div>
+                        {user.bio || "не указано"}
+                    </div>
                 </div>
             </div>
         </>
