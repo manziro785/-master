@@ -17,7 +17,7 @@ export  function MathPage() {
         <div className="custom-tooltip">
               <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
                 <div className="tooltiptext">
-                 <NavLink to='registration'>
+                 <NavLink to='/profile'>
                   <button className="sign-up">
                     Профиль
                   </button>

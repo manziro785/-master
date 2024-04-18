@@ -70,7 +70,7 @@ export function Header() {
           {isAuth && ( 
             <div className="btns-header">
               <a href="/test"className="test-btn-header">Тесты</a>
-              <a href="/login"className="login-btn-header">Выйти</a>
+              <a href="/" onClick={logout}className="login-btn-header">Выйти</a>
             </div>
               )}
         </div>
