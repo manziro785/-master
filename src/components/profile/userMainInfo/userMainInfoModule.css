@@ -16,7 +16,18 @@
     flex-direction: column;
 
 }
-.nickname-info::after {
+
+.red-text {
+    color: #b3b3b3;
+    font-size: 23px;
+    margin-left: 87px;
+    font-weight: 500;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nickname-info::after, .red-text::after {
     display: block;
     content: '';
     width: 377px;
@@ -41,4 +52,8 @@
     position: absolute;
     left: 58px;
     bottom: -100px;
+}
+
+#text {
+    width: 100px;
 }

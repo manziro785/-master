@@ -4,7 +4,12 @@ import "./awardsModule.css"
 export default function Awards() {
   return (
     <>
-    awards
+
+        <div className="awards-box">
+            <div className="title-active-box">
+                достижения
+            </div>
+        </div>
     </>
   )
 }

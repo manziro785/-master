@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import './authPageModule.css'
-import { NavLink } from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import axios from 'axios';
-import { AuthContext } from '../../../App';
-import { useNavigate } from 'react-router-dom';
+import {AuthContext} from '../../../App';
 
 export  function AuthPage() {
   const images = ['./src/assets/auth/image 13.svg', './src/assets/auth/image 14.svg', './src/assets/auth/Rectangle 7 (2).svg'];
@@ -39,6 +38,7 @@ async function sendData(event) {
   })
   .catch(error => {
     console.log(error)
+      alert('Login error')
 
   } );
 }

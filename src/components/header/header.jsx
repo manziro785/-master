@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext} from "react";
+import React from "react";
 import './headerModule.css'
-import { NavLink } from "react-router-dom";
-import { AuthContext } from "../../App";
+import {NavLink} from "react-router-dom";
+import {AuthContext} from "../../App";
 
 
 export function Header() {
@@ -51,7 +51,9 @@ export function Header() {
     setIsAuth(false)
     localStorage.removeItem('access')
     localStorage.removeItem('refresh')
+    window.location.reload(); 
   }
+
   return (
     <>
           <div className="header">
@@ -88,6 +90,11 @@ export function Header() {
                   <button className="log-in" onClick={logout}>
                     Выйти
                   </button>
+                  <NavLink to='/profile'>
+                    <button className="profile_btn">
+                      Профиль
+                    </button>
+                  </NavLink>
                   
                 </div>
           </div>)}

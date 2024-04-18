@@ -1,7 +1,14 @@
 import React from 'react'
 import './userMainInfoModule.css'
+import {UserContext} from '../../../App'
+
 
 export default function UserMainInfo() {
+    const [user, setUser] = React.useContext(UserContext)
+    console.log(user)
+
+    
+
     return (
         <>
             <div className="wrapper-main-info">
@@ -10,7 +17,7 @@ export default function UserMainInfo() {
                         Nickname
                     </div>
                     <div className="nickname-info">
-                        Влад Нурмагамедов
+                        {user.username}
                     </div>
                 </div>
                 <div className="nickname-box">
@@ -18,30 +25,33 @@ export default function UserMainInfo() {
                         Email
                     </div>
                     <div className="nickname-info">
-                        manziro785@gmail.com            </div>
+                        {user.email}
+                    </div>
                 </div>
                 <div className="nickname-box">
                     <div className="nickname">
                         Location
                     </div>
                     <div className="nickname-info">
-                        Бишкек, Чуйская обл.
+                        {user.location || "не указано"}
                     </div>
                 </div>
                 <div className="nickname-box">
                     <div className="nickname">
-                        Date of Birth
+                        Birth date
+
                     </div>
                     <div className="nickname-info">
-                        10 ноября 2006                        </div>
+                        {user.age || "не указано"}
+                    </div>
                 </div>
                 <div className="nickname-box-bio">
                     <div className="nickname">
                         Bio
                     </div>
                     <div className="nickname-info-bio">
-                        Я учусь в колледже Ала-Too,
-                        мне нужно сдать ОРТ для того чтобы поступить в хошоший уник                        </div>
+                        {user.bio || "не указано"}
+                    </div>
                 </div>
             </div>
         </>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.math-btn, .english-btn, .chemistry-btn, .history-btn, .russian-btn, .physics-btn {
+    width: 450px;
+    height: 145px;
+    border-radius: 24px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.math-btn:hover, .english-btn:hover, .chemistry-btn:hover, .history-btn:hover, .russian-btn:hover, .physics-btn:hover {
+    transform: scale(1.1);
+}
+
+.math-btn {
+    background-color: #71C1F4;
+}
+
+.english-btn {
+    background-color: #71F486;
+}
+
+.chemistry-btn {
+    background-color: #E0B548;
+}
+
+.history-btn {
+    background-color: #AA71F4;
+}
+
+.physics-btn {
+    background-color: #E5FD52;
+}
+
+.russian-btn {
+    background-color: #FB7F7F;
+}
+
+.topic {
+    margin-bottom: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.language {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.time {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+}
+
+.task {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.tests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+}

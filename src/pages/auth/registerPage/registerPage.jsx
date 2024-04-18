@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import {Link, NavLink} from 'react-router-dom';
+import {useForm} from 'react-hook-form';
 import axios from 'axios';
-import TemplatePage from '../../../components/TemplatePage.jsx';
 import './registerPageModule.css';
+
 
 const RegisterPage = () => {
   const {

@@ -91,7 +91,8 @@ body {
     position: relative;
     background:none
 }
-.sign-up {
+
+.sign-up, .profile_btn {
         display: inline-block;
         color: rgb(255, 255, 255);
         font-size: 23px;
@@ -107,11 +108,15 @@ body {
         background: none;
         font-weight: 400;
 
-       
-    
-
 }
-.sign-up:hover, .log-in:hover {
+
+.profile_btn {
+    padding: 10px 25px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.sign-up:hover, .log-in:hover, .profile_btn:hover {
 
     /* background-color:#045C24; */
     color:rgb(40, 113, 152);
