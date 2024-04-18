@@ -1,9 +1,11 @@
 .title-about {
-    font-size: 53px;
-    color: #0D2A2D;
-    font-style: italic;
-    font-weight: 900px;
-    margin-bottom: 80px;
+    color: #000;
+    font-size: 60px;
+    font-weight: 1000;
+    display: flex;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
 }
 .aboutus {
     display: flex;
@@ -19,4 +21,9 @@
 .our-team img {
     margin-right: 30px;
     transition: all 0.4s ease;
+}
+.img-bg {
+    display: block;
+  width: 100%;
+  height: auto;
 }

@@ -10,10 +10,10 @@ export default function Comments() {
   return (
     <>
     <div className="title-comments">
-    Отзывы пользователей
+    Отзывы 
     </div>
  <div className="photo-container">
-      {[2, 1, 3].map((index) => (
+      {[(2), (3), (4)].map((index) => (
         <img
           key={`photo${index}`}
           className={`photo ${activeIndex === index ? 'active' : ''}`}

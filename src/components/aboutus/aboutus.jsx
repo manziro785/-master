@@ -8,6 +8,9 @@ export default function Aboutus() {
         <div className="title-about">
         Наша команда
         </div>
+        <div className="bg-img">
+          <img src="./src/assets/common/Frame 44.svg" alt="" />
+        </div>
         <div className="our-team">
 <img src="./src/assets/common/Frame 14.svg" alt="" />
 <img src="./src/assets/common/Frame 15.svg" alt="" />

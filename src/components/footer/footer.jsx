@@ -1,14 +1,17 @@
 import React from 'react'
 import './footerModule.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
   return (
     <div>
         <div className="footer" id='end'>
         <div className="logo-foot">
-            <img src="./src/assets/header/ОРТмастер (2).svg" alt=""  className='logo-footer'/>
+          <NavLink to='/'>
+            <img src="./src/assets/header/logo (8).svg" alt=""  className='logo-footer'/>
+            </NavLink>
 <div className="undertitle">
-Вместе к Знаниям, Шаг за Шагом
+Вместе к <span className='span-foot'>Знаниям</span> <br/> Шаг за Шагом
 </div>
         </div>
         <div className="contac">
