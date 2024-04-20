@@ -1,4 +1,4 @@
-import './App.css'
+import './common.css'
 import React, {useEffect} from 'react'
 import {RouterProvider} from 'react-router-dom'
 import {routers} from './app/api.jsx'

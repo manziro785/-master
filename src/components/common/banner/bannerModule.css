@@ -1,11 +1,13 @@
-.container {
-    max-width: 1280px;
+.banner {
+    width: 100%;
     height: 544px;
     background-color: #9874FE;
     border-radius: 30px;
     display: flex;
-    margin-top: 50px;
-
+    margin: 50px auto;
+    display:flex;
+    justify-content: center;
+    
 
 }
 .left-banner {
@@ -53,6 +55,10 @@
     margin-top: 35px;
     cursor: pointer;
 }
+.btn-che {
+    text-decoration: none;
+    color: #000;
+}
 .btn-check:hover {
     background-color: #2FC792;
 
@@ -62,7 +68,82 @@
     margin-left: 50px;
     margin-right: 67px;
 }
-.mega-wrapper {
+.container {
+    /* margin-top: 80px; */
+    margin: 0 80px;
+    margin-top: 120px;
+    max-width: 1950px;
+}
+/* .wrapper {
     display: flex;
     justify-content: center;
+
+} */
+.wrapper-alert {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.alert-container {
+    background-color:#4699FF;
+    justify-content: center;
+    position: fixed;
+    max-height: 250px;
+    max-width: 500px;
+    border-radius: 30px;
+    color:#000;
+    border: 3px solid #000;
+    margin-top: 50px;
+    z-index: 8;
+
+}
+.alert {
+    width: 500px;
+    height: 500px;
+    
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.618); /* Чем ниже значение последнего числа, тем больше размытие */
+    backdrop-filter: blur(3px); /* Размытие заднего фона */
+    z-index: 7; /* Ниже z-index алерта */
+  }
+.title-alert {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+.btn-alert1, .btn-alert2 {
+font-size: 20px;
+    text-decoration: none;
+    background: none;
+    font-weight: 800;
+    color:#000;
+    width: 408px;
+    /* height: 44px; */
+    border-radius: 20px;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-alert1:hover , .btn-alert2:hover {
+    background-color: #47FFBF;
+}
+.btn-alert2 {
+    padding: 8px 0;
+
+}
+.btns-alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

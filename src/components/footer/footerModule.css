@@ -41,15 +41,37 @@
     font-style: italic;
 
 }
-.num {
+.num, .num-2giz {
     font-size: 22px;
     color: #000;
     margin-bottom: 10px;
     text-align: end;
     font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.num-2giz:hover, .num:hover {
+    text-decoration: underline;
 }
 .contac {
     position: absolute;
     right: 100px;
     margin-top: 30px;
+}
+.copy-message {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color:#47FFBF;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    display: flex;
+    align-items:center;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './comments.css'
 
 export default function Comments() {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(3);
+    
 
     const changeSize = (clickedIndex) => {
       setActiveIndex(clickedIndex);
@@ -13,7 +14,7 @@ export default function Comments() {
     Отзывы 
     </div>
  <div className="photo-container">
-      {[(2), (3), (4)].map((index) => (
+      {[2, 3, 4].map((index) => (
         <img
           key={`photo${index}`}
           className={`photo ${activeIndex === index ? 'active' : ''}`}

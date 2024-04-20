@@ -6,6 +6,7 @@
     margin-right: 20px;
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 .aboutus {
     display: flex;
@@ -15,15 +16,32 @@
     margin-top: 140px;
 }
 
-.our-team img:hover {
+.wrapper-about img:hover {
     transform: scale(1.05);
+
 }
-.our-team img {
-    margin-right: 30px;
+.wrapper-about img {
+    /* margin-right: 30px; */
     transition: all 0.4s ease;
+    z-index: 5;
+    position: relative;
 }
 .img-bg {
     display: block;
-  width: 100%;
+  width: 116%;
   height: auto;
+  position: absolute;
+  left: -110px;
+  z-index: 1;
+
+}
+.wrapper-about {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 80px;
+    display:flex;
+    justify-content: space-around;
+    z-index: 2;
+    position: relative;
+    transform: translate(0%, 60%);
 }

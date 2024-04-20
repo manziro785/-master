@@ -2,6 +2,7 @@ import React from "react";
 import './headerModule.css'
 import {NavLink} from "react-router-dom";
 import {AuthContext} from "../../App";
+import { useState } from "react";
 
 
 export function Header() {
@@ -54,8 +55,18 @@ export function Header() {
     window.location.reload(); 
   }
 
+  const [showAlert, setShowAlert] = useState(false);
+  function handleCloseAlert() {
+    setShowAlert(false);
+  }
+
   return (
     <>
+    {/* <div className="container"> */}
+    {/* <div className="wrapper"> */}
+    
+    <div className="wrapper-header">
+   
           <div className="header">
           <NavLink to='/' className="logo">
             <img src="./src/assets/header/logo (8).svg" alt="" className="logo-main" />
@@ -63,17 +74,41 @@ export function Header() {
           
           {!isAuth && (
             <div className="btns-header">
-              <a href="/test" className="test-btn-header">Тесты</a>
+              <div className="test-btn-header" onClick={() => setShowAlert(true)} style={{cursor:'pointer'}}>Тесты</div>
               <a href="/login"className="login-btn-header">Войти</a>
+              <a href="/register"className="reg-btn-header">Регистрация</a>
+
             </div>
               )}
           {isAuth && ( 
             <div className="btns-header">
-              <a href="/test"className="test-btn-header">Тесты</a>
+              <a href="/lessons"className="test-btn-header" style={{cursor:'pointer'}}>Тесты</a>
               <a href="/" onClick={logout}className="login-btn-header">Выйти</a>
             </div>
               )}
         </div>
+        
+        </div>
+        {showAlert && (
+        <>
+        <div className="wrapper-alert">
+        <div className="overlay"></div>
+        <div className="alert-container">
+          <div className="alert">
+            <p className="title-alert">Вы можете проверить себя <br/> если вошли в аккаунт</p>
+            <div className="btns-alert">
+            <NavLink className='btn-alert1' to='/login'>Войти</NavLink>
+            <button className='btn-alert2'onClick={handleCloseAlert}>Отмена</button>
+          </div>
+          </div>
+        </div>
+        </div>
+        </>
+      )}
+        {/* </div> */}
+        
+        
+        {/* </div> */}
     </>
   )
 }
