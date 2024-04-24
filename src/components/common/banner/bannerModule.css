@@ -1,6 +1,6 @@
 .banner {
     width: 100%;
-    height: 544px;
+    min-height: 544px;
     background-color: #9874FE;
     border-radius: 30px;
     display: flex;
@@ -54,6 +54,7 @@
     width: fit-content;
     margin-top: 35px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .btn-che {
     text-decoration: none;
@@ -69,21 +70,11 @@
     margin-right: 67px;
 }
 .container {
-    /* margin-top: 80px; */
     margin: 0 80px;
-    margin-top: 120px;
     max-width: 1950px;
 }
-/* .wrapper {
-    display: flex;
-    justify-content: center;
 
-} */
-.wrapper-alert {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
+
 
 .alert-container {
     background-color:#4699FF;
@@ -146,4 +137,123 @@ font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.img-ban {
+    display: none;
+}
+
+@media (max-width: 1146px) {
+    .info-banner {
+        font-size: 20px;
+    }
+    .subtitle-banner {
+        font-size: 50px;
+    }
+    .title-banner {
+        font-size: 28px;
+    }
+    .btn-check {
+        transform: scale(0.8); 
+        margin-left: -20px;
+    }
+}
+@media (max-width: 1146px) {
+    .img-banner {
+        width: 35   0px;
+    }
+}
+/* @media (max-width: 1079px) {
+
+    .subtitle-banner {
+        font-size: 40px;
+    }
+    .title-banner {
+        font-size: 25px;
+    }
+
+
+} */
+@media (max-width: 1105px) {
+.right-banner {
+    display: none;
+}
+/* .img-ban {
+    display: block;
+} */
+.btn-check {
+    margin-bottom: 40px;
+}
+.banner {
+    min-height: 200px;
+}
+}
+@media (max-width: 885px) {
+    .info-banner{
+        margin-right: 40px;
+    }
+    
+}    
+@media (max-width: 740px) {
+    .title-banner{
+        margin-right: 20px;
+    }
+    .img-ban {
+        display: block;
+
+    }
+  
+    
+}
+@media (max-width: 660px) {
+   
+    .img-ban {
+        display: none;
+
+    }
+  
+    
+}
+@media (max-width: 660px) {
+    .container {
+        margin: 0 30px;
+    }
+}
+@media (max-width: 500px) {
+    .subtitle-banner {
+        font-size: 40px;
+    }
+    .title-banner {
+        font-size: 23px;
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+    .banner {
+        margin: 30px 0;
+    
+        border-radius: 20px
+    }
+}
+@media (max-width: 400px) {
+    .subtitle-banner {
+        font-size: 30px;
+    }
+    .title-banner {
+        font-size: 19px;
+        margin-bottom: 10px;
+        padding-top: 30px;
+    }
+    .banner {
+        margin: 30px 0;
+    }
+    .info-banner{
+        font-size: 14px;
+    }
+    .btn-check {
+        transform: scale(0.6); 
+        margin: 5px;
+        margin-left: -45px;
+
+
+    }
+   
 }

@@ -9,8 +9,8 @@ export default function Footer() {
 
   const handleCopyPhoneNumber = () => {
     const phoneNumber = '+996 704 704 716'; 
-    navigator.clipboard.writeText(phoneNumber); // Копируем номер в буфер обмена
-    setIsCopied(true); // Устанавливаем флаг копирования в true
+    navigator.clipboard.writeText(phoneNumber);
+    setIsCopied(true); 
     setTimeout(() => setIsCopied(false), 3000); // Через 3 секунды сбрасываем флаг копирования
   };
   const handleCopyGmail = () => {

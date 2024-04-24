@@ -45,3 +45,48 @@ cursor: pointer;
 padding-bottom: 30px;
 
 }
+@media (max-width:1100px) {
+    .btns-move {
+        margin-top: 0;
+    }
+    .gallery {
+        padding-bottom: 0;
+    }
+    .video {
+        margin-top: 120px;
+    }
+}
+@media (max-width:800px) {
+    /* .btns-move {
+        margin-top: 0;
+    } */
+    .gallery {
+        transform: scale(0.9);
+    }
+    .gallery img {
+        padding-top: 60px;
+    }
+    
+}
+@media (max-width:500px) {
+    /* .btns-move {
+        margin-top: 0;
+    } */
+    .gallery {
+        transform: scale(0.7);
+        width: 130%;
+        margin-left: -60px;
+    }
+  
+    .gallery img {
+        padding-top: 0px;
+    }
+    .video {
+        margin:-70px;
+    }
+    .btns-move {
+        transform: scale(0.8);
+
+    }
+    
+}

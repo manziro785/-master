@@ -42,6 +42,10 @@ export  function Banner() {
     <div className="subtitle-banner">
     ОРТ <span className="subt-span">Легко</span> и <br/><span className="subt-span">Бесплатно!</span>
     </div>
+    <div className="img-ban">
+    <img src={Bannerimg} alt=""  className=""/>
+
+    </div>
     <div className="info-banner">
     Проверь свои знания с нашим пробным тестом для ОРТ. Это быстро, просто и абсолютно бесплатно. Узнай, где ты стоишь в своей подготовке и какие темы требуют дополнительного внимания. Подготовься к экзамену шаг за шагом с нашей поддержкой!
     </div>
@@ -61,7 +65,7 @@ export  function Banner() {
     )}
     </div>
     <div className="right-banner">
-      <img src={Bannerimg} alt="" />
+      <img src={Bannerimg} alt=""  className="img-banner"/>
     </div>
     </div>
     </div>
