@@ -57,9 +57,9 @@ export function TestPage() {
             <NavLink to={`/lessons/${card.id}`}>
                 <button key={index} className='english-btn'>
                     <span className='topic'>{card.name}</span>
-                    <span className='language'>EU</span>
-                    <span className='time'>Время: 60 мин</span>
-                    <span className='task'>Количество заданий: 50 </span>
+                    <span className='language'>{card.language}</span>
+                    <span className='time'>{card.time}</span>
+                    <span className='task'>{card.data} </span>
                 </button>
             </NavLink>
         )
