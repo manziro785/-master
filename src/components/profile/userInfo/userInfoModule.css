@@ -1,17 +1,20 @@
 .user-info-box {
     width: 765px;
-    min-height: 986px;
-    background-color: #296388;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-height: 940px;
+    background-color: #4699FF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
     position: relative;
     margin-left: 110px;
     margin-top: 90px;
+    border-radius:20px;
+    margin-bottom: 50px;
+    
 }
 .header-user-info {
     color: #ffff;
-    font-size: 26px;
-    font-style: italic;
-    font-weight: 500;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
     display: flex;
     padding: 34px 50px;
     display: flex;
@@ -20,27 +23,30 @@
 .btn-save {
 position: absolute;
 right: 28px;
-color: #1B3C51;
+color: #ffff;
 padding: 8px 17px;
-background-color: #4780B8;
-margin-top: -10px;
+background-color: #9874FE;
+border-radius: 20px;
+margin-top: 0px;
+font-size: 20px;
+margin-right: 10px;
 cursor: pointer;
 transition: all 0.4s ease;
 
 
 }
 .btn-save:hover {
-    background-color: #3b6fa3;
+    background-color: #7450DA;
 
 }
-.header-user-info::after {
+/* .header-user-info::after {
     background-color : #87AFC9;
     display: block;
     content:'';
     height: 1px;
     width: 636px;
 margin-top: 25px;
-}
+} */
 
 .wrapper-userinfo {
     background-color: rgb(96, 142, 183)

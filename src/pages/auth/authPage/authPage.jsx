@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react'
 import './authPageModule.css'
 import {NavLink, useNavigate} from 'react-router-dom'
 import axios from 'axios';
+import logomain from '../../../assets/header/logo (8).svg'
+import usericon from "../../../assets/header/userr.svg"
+
+// logo (8).svg'
 import {AuthContext} from '../../../App';
 
 export  function AuthPage() {
@@ -54,30 +58,38 @@ function setPasswordUser (event) {
 
 }
 
+
+function logout(event) {
+  const navigate = useNavigate(); // Используем хук useNavigate для навигации
+  setIsAuth(false); // Устанавливаем isAuth в false
+  localStorage.removeItem('access'); // Удаляем токен доступа из localStorage
+  localStorage.removeItem('refresh'); // Удаляем токен обновления из localStorage
+  navigate('/'); // Перенаправляем пользователя на главную страницу
+}
   return (
     <>
-     <div className="header1">
-        <NavLink to='/' className="logo">
-            <img src="./src/assets/header/ОРТмастер (2).svg" alt="" className="logo-main" />
-        </NavLink>
-        <div className="navbar">
-        {/* <div className="custom-tooltip">
-              <img src="./src/assets/header/icon (2).svg" alt="Mini Photo" className="mini-photo" id="person" />
-                <div className="tooltiptext">
-                 <NavLink to='registration'>
-                  <button className="sign-up">
-                    Зарегаться
-                  </button>
-                  </NavLink>
-                  <NavLink to='login'>
-                  <button className="log-in">
-                    Войти
-                  </button>
-                  </NavLink>
+      <div className="header">
+                <NavLink to='/' className="logo">
+                    <img src={logomain} alt="" className="logo-main" />
+                </NavLink>
+                <div className="navbarr">
+                    <div className="custom-tooltip">
+                        <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
+                        <div className="tooltiptext">
+                            <NavLink to='/profile'>
+                                <button className="sign-up">
+                                    Профиль
+                                </button>
+                            </NavLink>
+                            <NavLink to='/'>
+                                <button onClick={logout} className="log-in">
+                                    Выйти
+                                </button>
+                            </NavLink>
+                        </div>
+                    </div>
                 </div>
-          </div> */}
-        </div>
-    </div>
+            </div>
     <div className="auth-wrapper">
       <div className="auth-box">
         <div className="container-auth">
@@ -90,10 +102,14 @@ function setPasswordUser (event) {
             <input type="submit" value='войти' className='btn-auth'/>
           </form>
           <div className="relink-reg">
-          У вас нет аккаунта? 
-          <NavLink to='/register' className="btn-regis">
+          У вас нет <span className='span-login'>  
+          <a href="/register" className='span-llogin'>
+            аккаунта
+            </a>
+            </span> ? 
+          {/* <NavLink to='/register' className="btn-regis">
           Зарегаться
-          </NavLink>
+          </NavLink> */}
           </div>
         </div>
       </div>
