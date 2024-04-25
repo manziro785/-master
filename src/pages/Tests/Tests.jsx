@@ -11,7 +11,7 @@ export default function Tests() {
   return (
     <>
         <Header />
-        <h1> Тесты: </h1>
+        <h1> Тесты:      </h1>
         <Footer />
     </>
   )
