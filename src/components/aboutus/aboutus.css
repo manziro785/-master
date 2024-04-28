@@ -35,12 +35,14 @@
   z-index: 1;
 
 }
+@media (min-width: 1905px) {
+    .img-bg {
+        display: none;
+    }
+}
 .wrapper-about {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 80px;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     z-index: 2;
     position: relative;

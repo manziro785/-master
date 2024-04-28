@@ -3,10 +3,17 @@ import { Link, NavLink } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './registerPageModule.css';
+import {AuthContext} from '../../../App';
+import { useNavigate} from 'react-router-dom'
+import logomain from '../../../assets/header/logo (8).svg'
+import usericon from "../../../assets/header/userr.svg"
+
+
 
 const RegisterPage = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [errorMessage, setErrorMessage] = useState('');
+  const [isAuth, setIsAuth] = React.useContext(AuthContext)
 
   const onSubmit = async (data) => {
     try {
@@ -27,14 +34,39 @@ const RegisterPage = () => {
     }
   };
 
+  
+function logout(event) {
+  const navigate = useNavigate(); // Используем хук useNavigate для навигации
+  setIsAuth(false); // Устанавливаем isAuth в false
+  localStorage.removeItem('access'); // Удаляем токен доступа из localStorage
+  localStorage.removeItem('refresh'); // Удаляем токен обновления из localStorage
+  navigate('/'); // Перенаправляем пользователя на главную страницу
+}
+
   return (
       <>
-        <div className="header1">
-          <NavLink to='/' className="logo">
-            <img src="../../../../src/assets/header/ОРТмастер%20(2).svg" alt="Logo" className="logo-main" />
-          </NavLink>
-          <div className="navbar"></div>
-        </div>
+        <div className="header">
+                <NavLink to='/' className="logo">
+                    <img src={logomain} alt="" className="logo-main" />
+                </NavLink>
+                <div className="navbarr">
+                    <div className="custom-tooltip">
+                        <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
+                        <div className="tooltiptext">
+                            <NavLink to='/profile' style={{marginBottom: '10px'}}>
+                                <button className="sign-up">
+                                    Логин
+                                </button>
+                            </NavLink>
+                            {/* <NavLink to='/'>
+                                <button onClick={logout} className="log-in">
+                                    Выйти
+                                </button>
+                            </NavLink> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div className="form-auth">
           <h1>Регистрация</h1>
           <form onSubmit={handleSubmit(onSubmit)}>

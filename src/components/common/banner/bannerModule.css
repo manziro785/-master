@@ -7,11 +7,23 @@
     margin: 50px auto;
     display:flex;
     justify-content: center;
+    /* margin-top: 130px ; */ /*для позишион фиксед*/
     
 
 }
 .left-banner {
     margin-left: 30px;
+}
+.no-scroll {
+    overflow: hidden ;
+}
+.close-btn {
+    display: flex;
+    justify-content: end;
+    margin: 30px 40px 10px 10px;
+}
+.close-btn img {
+    cursor: pointer;
 }
 .title-banner {
     color: #47FFBF;
@@ -69,10 +81,7 @@
     margin-left: 50px;
     margin-right: 67px;
 }
-.container {
-    margin: 0 80px;
-    max-width: 1950px;
-}
+
 
 
 
@@ -86,7 +95,7 @@
     color:#000;
     border: 3px solid #000;
     margin-top: 50px;
-    z-index: 8;
+    z-index: 11;
 
 }
 .alert {
@@ -103,7 +112,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.618); /* Чем ниже значение последнего числа, тем больше размытие */
     backdrop-filter: blur(3px); /* Размытие заднего фона */
-    z-index: 7; /* Ниже z-index алерта */
+    z-index: 10; /* Ниже z-index алерта */
   }
 .title-alert {
     font-size: 24px;

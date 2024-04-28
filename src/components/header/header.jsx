@@ -2,23 +2,12 @@ import React from "react";
 import './headerModule.css'
 import {NavLink} from "react-router-dom";
 import {AuthContext} from "../../App";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export function Header() {
   const [isAuth, setIsAuth] = React.useContext(AuthContext);
 
-  const scrollToTop = () => {
-    const scrollStep = -window.scrollY / (1000 / 15);
-
-    function scroll() {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-        requestAnimationFrame(scroll);
-      }
-    }
-    requestAnimationFrame(scroll);
-  };
 
   const scrollToElement = (element, duration) => {
     if (element) {
@@ -56,18 +45,27 @@ export function Header() {
   }
 
   const [showAlert, setShowAlert] = useState(false);
+  useEffect(() => {
+    if (showAlert) {
+      document.body.style.overflowY= 'hidden'; // Устанавливаем стиль, который запрещает прокрутку
+  } else {
+      document.body.style.overflow = ''; // Удаляем стиль, чтобы вернуть прокрутку
+  }
+}, [showAlert]);
   function handleCloseAlert() {
     setShowAlert(false);
   }
 
+
   return (
     <>
-    {/* <div className="container"> */}
-    {/* <div className="wrapper"> */}
-    
-    <div className="wrapper-header">
+
+    <div className="header-wrapper">
+    <div className="container">
+
+    <div className="header">
    
-          <div className="header">
+         
           <NavLink to='/' className="logo">
             <img src="./src/assets/header/logo (8).svg" alt="" className="logo-main" />
         </NavLink>
@@ -76,13 +74,14 @@ export function Header() {
             <div className="btns-header">
               <div className="test-btn-header" onClick={() => setShowAlert(true)} style={{cursor:'pointer'}}>Тесты</div>
               <a href="/login"className="login-btn-header">Войти</a>
-              <a href="/register"className="reg-btn-header">Регистрация</a>
+              <a href="/register"className="reg-btn-header" style={{marginRight: '0'}}>Регистрация</a>
 
             </div>
               )}
           {isAuth && ( 
             <div className="btns-header">
               <a href="/lessons"className="test-btn-header" style={{cursor:'pointer'}}>Тесты</a>
+              <a href="/profile" className="reg-btn-header">Профиль</a>
               <a href="/" onClick={logout}className="login-btn-header">Выйти</a>
             </div>
               )}
@@ -94,21 +93,20 @@ export function Header() {
         <div className="wrapper-alert">
         <div className="overlay"></div>
         <div className="alert-container">
-          <div className="alert">
+        <div className="alert">
+            <div className="close-btn"><img src="./src/assets/common/close.svg" alt=""  onClick={handleCloseAlert}/></div>
             <p className="title-alert">Вы можете проверить себя <br/> если вошли в аккаунт</p>
             <div className="btns-alert">
             <NavLink className='btn-alert1' to='/login'>Войти</NavLink>
-            <button className='btn-alert2'onClick={handleCloseAlert}>Отмена</button>
           </div>
           </div>
         </div>
         </div>
         </>
+        
       )}
-        {/* </div> */}
-        
-        
-        {/* </div> */}
+
+        </div>
     </>
   )
 }

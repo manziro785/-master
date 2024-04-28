@@ -6,7 +6,7 @@ export  function Cards() {
 
   return (
     <>
-    <div className="wrapper-cards">
+    <div className="container">
      <div className="cards">
         <img src="./src/assets/common/card.svg" alt="" className='card1' />
         <img src="./src/assets/common/card (1).svg" alt="" className='card2'/>

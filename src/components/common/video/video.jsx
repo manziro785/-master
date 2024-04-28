@@ -23,11 +23,15 @@ export default function Video() {
   };
   return (
     <>
-    <div className="video">
+        <div className="video">
+
+    {/* <div className="container"> */}
         
         <div className="gallery">
          
-            <a className = 'img-video1' href="https://www.youtube.com/watch?v=8psth9ODtH0" target="_blank"> <img src="./src/assets/common/Frame 45.svg" alt=""className = 'img-video2' /></a>
+            <a className = 'img-video-first' href="https://www.youtube.com/watch?v=8psth9ODtH0" target="_blank">
+               <img src="./src/assets/common/Frame 45.svg" alt=""className = 'img-video2' />
+             </a>
             <a className = 'img-video1' href="https://www.youtube.com/watch?v=X9RiKL3c7sY" target="_blank"> <img src="./src/assets/common/video.svg" alt="" className = 'img-video2'/></a>
             <a className = 'img-video1' href="https://www.youtube.com/watch?v=orwJI0vauJ4" target="_blank"> <img src="./src/assets/common/video (1).svg" alt="" className = 'img-video2'/></a>
 
@@ -41,6 +45,7 @@ export default function Video() {
           </div>
         </div>
     </div>
+    {/* </div> */}
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import './bannerModule.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Bannerimg from "../../../assets/common/Frame 30 (2).svg"
 import {AuthContext} from "../../../App";
 import { NavLink } from "react-router-dom";
@@ -11,13 +11,19 @@ export  function Banner() {
   const [isAuth, setIsAuth] = React.useContext(AuthContext);
   const [showAlert, setShowAlert] = useState(false);
 
-
-  function handleCloseAlert() {
-    setShowAlert(false);
-  }
+    useEffect(() => {
+      console.log('lf')
+      if (showAlert) {
+        document.body.style.overflowY= 'hidden'; // Устанавливаем стиль, который запрещает прокрутку
+    } else {
+        document.body.style.overflow = ''; // Удаляем стиль, чтобы вернуть прокрутку
+    }
+  }, [showAlert]);
+    function handleCloseAlert() {
+      setShowAlert(false);
+    }
   return (
     <>
-      <div className="wrapper">
     <div className="container">
     
       <div className="banner">
@@ -26,10 +32,10 @@ export  function Banner() {
         <div className="overlay"></div>
         <div className="alert-container">
           <div className="alert">
+            <div className="close-btn"><img src="./src/assets/common/close.svg" alt=""  onClick={handleCloseAlert}/></div>
             <p className="title-alert">Вы можете проверить себя <br/> если вошли в аккаунт</p>
             <div className="btns-alert">
             <NavLink className='btn-alert1' to='/login'>Войти</NavLink>
-            <button className='btn-alert2'onClick={handleCloseAlert}>Отмена</button>
           </div>
           </div>
         </div>
@@ -66,7 +72,6 @@ export  function Banner() {
     </div>
     <div className="right-banner">
       <img src={Bannerimg} alt=""  className="img-banner"/>
-    </div>
     </div>
     </div>
     </div>

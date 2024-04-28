@@ -5,7 +5,7 @@ import axios from 'axios';
 import logomain from '../../../assets/header/logo (8).svg'
 import usericon from "../../../assets/header/userr.svg"
 
-// logo (8).svg'
+
 import {AuthContext} from '../../../App';
 
 export  function AuthPage() {
@@ -68,29 +68,13 @@ function logout(event) {
 }
   return (
     <>
-      <div className="header">
-                <NavLink to='/' className="logo">
-                    <img src={logomain} alt="" className="logo-main" />
-                </NavLink>
-                <div className="navbarr">
-                    <div className="custom-tooltip">
-                        <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
-                        <div className="tooltiptext">
-                            <NavLink to='/profile'>
-                                <button className="sign-up">
-                                    Профиль
-                                </button>
-                            </NavLink>
-                            <NavLink to='/'>
-                                <button onClick={logout} className="log-in">
-                                    Выйти
-                                </button>
-                            </NavLink>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
     <div className="auth-wrapper">
+    <div className="logout-from-auth">
+      <NavLink to ='/'>
+      <img src="./src/assets/auth/System-Icons.svg" alt="" />
+      </NavLink>
+    </div>
       <div className="auth-box">
         <div className="container-auth">
           <div className="title-auth">
@@ -106,15 +90,12 @@ function logout(event) {
           <a href="/register" className='span-llogin'>
             аккаунта
             </a>
-            </span> ? 
-          {/* <NavLink to='/register' className="btn-regis">
-          Зарегаться
-          </NavLink> */}
+            </span> 
+        
           </div>
         </div>
       </div>
       <div className="img-container-auth">
-      <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} className="img-banner"/>
       </div>
     </div>
     </>

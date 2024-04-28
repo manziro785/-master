@@ -1,19 +1,19 @@
 .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 margin-top: 100px;
 flex-wrap: wrap;
 
 }
 .card1 {
-    margin-left: 55px;
+    /* margin-left: 55px; */
     transition: all 0.3s ease;
 
 }
 
 .card3 {
     transition: all 0.3s ease;
-    margin-right: 55px;
+    /* margin-right: 55px; */
 
 }
 .card2 {

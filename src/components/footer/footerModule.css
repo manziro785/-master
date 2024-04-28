@@ -1,12 +1,10 @@
 .footer {
-    background-color: #4699FF;
     margin-top: 30px;
     display: flex;
     display:flex;
     justify-content: space-between;
 }
 .logo-foot {
-    padding-left: 30px;
     padding-top: 20px;
 }
 .undertitle {
@@ -14,6 +12,10 @@
     color: #000;
     font-weight: 700;
     margin-top: 30px;
+}
+.wrapper-footer {
+    background-color: #4699FF;
+
 }
 .undertitle::after {
     content: '';
@@ -59,10 +61,8 @@
     text-decoration: underline;
 }
 .contac {
-    /* position: absolute;
-    right: 100px; */
+
     margin-top: 30px;
-    margin-right: 50px;
 }
 .copy-message {
     position: fixed;

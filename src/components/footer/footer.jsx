@@ -19,13 +19,28 @@ export default function Footer() {
     setCopied(true); // Устанавливаем флаг копирования в true
     setTimeout(() => setCopied(false), 3000); // Через 3 секунды сбрасываем флаг копирования
   };
+
+  const scrollToTop = () => {
+    const scrollStep = -window.scrollY / (1000 / 15);
+
+    function scroll() {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+        requestAnimationFrame(scroll);
+      }
+    }
+    requestAnimationFrame(scroll);
+  };
+
   return (
     <div>
+      <div className="wrapper-footer">
+        <div className="container">
         <div className="footer" id='end'>
         <div className="logo-foot">
-          <NavLink to='/'>
-            <img src="./src/assets/header/logo (8).svg" alt=""  className='logo-footer'/>
-            </NavLink>
+          <div onClick={scrollToTop} >
+            <img src="./src/assets/header/logo (8).svg" alt=""  className='logo-footer' style={{cursor: 'pointer'}}/>
+            </div>
 <div className="undertitle">
 Вместе к <span className='span-foot'>Знаниям</span> <br/> Шаг за Шагом
 </div>
@@ -58,6 +73,8 @@ export default function Footer() {
               </a>
               </div>
             </div>
+    </div>
+    </div>
     </div>
     </div>
   )

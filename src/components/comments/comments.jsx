@@ -13,6 +13,7 @@ export default function Comments() {
     <div className="title-comments">
     Отзывы 
     </div>
+    <div className="container">
  <div className="photo-container">
       {[2, 3, 4].map((index) => (
         <img
@@ -23,6 +24,7 @@ export default function Comments() {
           onClick={() => changeSize(index)}
         />
       ))}
+    </div>
     </div>
     </>
   )

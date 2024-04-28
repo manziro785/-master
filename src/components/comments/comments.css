@@ -1,11 +1,12 @@
 .photo {
     margin: 14px;
-    width: 28%;
+    width: 32%;
     transition: all 0.5s ease;
+    z-index: 10;
 }
   
   .photo.active {
-    width: 35%;   
+    width: 38%;   
 
 }
 .photo-container {
@@ -13,7 +14,7 @@
     align-items:center;
     justify-content: center;
     /* margin-top: 100px; */
-    height: 700px;
+    height: 750px;
 }
 .title-comments {
     color: #000;
