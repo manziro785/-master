@@ -1,4 +1,4 @@
-
+/* 
 
 .header1 {
     background-color: #5b92d8;
@@ -106,25 +106,25 @@
     flex: 1;
 }
 .input-container {
-    background-color: #4699FF; /* main-blue color */
-    border-radius: 20px; /* rounded corners */
-    padding: 20px; /* spacing around inputs */
-    width: 400px; /* adjust width as needed */
-    margin-top: 20px; /* spacing from the top */
+    background-color: #4699FF;
+    border-radius: 20px; 
+    padding: 20px; 
+    width: 400px; 
+    margin-top: 20px;
 }
 
 .input-auth {
     width: 100%;
-    font-size: 24px; /* adjust font size as needed */
+    font-size: 24px; 
     background: none;
     border: none;
-    border-bottom: 1px solid #fff; /* white border bottom */
+    border-bottom: 1px solid #fff; 
     outline: none;
-    color: #fff; /* text color */
-    margin-bottom: 10px; /* spacing between inputs */
+    color: #fff; 
+    margin-bottom: 10px; 
 }
 
 .input-auth::placeholder {
-    color: #fff; /* placeholder text color */
-    opacity: 0.7; /* adjust placeholder opacity as needed */
-}
+    color: #fff; 
+    opacity: 0.7; 
+} */

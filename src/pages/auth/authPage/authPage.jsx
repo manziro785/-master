@@ -2,13 +2,14 @@ import React, {useEffect, useState} from 'react'
 import './authPageModule.css'
 import {NavLink, useNavigate} from 'react-router-dom'
 import axios from 'axios';
-import logomain from '../../../assets/header/logo (8).svg'
-import usericon from "../../../assets/header/userr.svg"
+import openEye from '../../../assets/auth/open-eye.svg'
+import closedEye from "../../../assets/auth/close-eye.svg"
 
 
 import {AuthContext} from '../../../App';
 
 export  function AuthPage() {
+  
   const images = ['./src/assets/auth/image 13.svg', './src/assets/auth/image 14.svg', './src/assets/auth/Rectangle 7 (2).svg'];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,6 +67,14 @@ function logout(event) {
   localStorage.removeItem('refresh'); // Удаляем токен обновления из localStorage
   navigate('/'); // Перенаправляем пользователя на главную страницу
 }
+
+
+const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <>
     
@@ -75,27 +84,57 @@ function logout(event) {
       <img src="./src/assets/auth/System-Icons.svg" alt="" />
       </NavLink>
     </div>
+    <div className="wrapper-login">
       <div className="auth-box">
         <div className="container-auth">
           <div className="title-auth">
           Войти
           </div>
           <form action="" className='form-auth' onSubmit={sendData}>
-            <input type="text" placeholder='ваше имя' className='input-auth' onChange={setLoginUser}/>
-            <input type="password" placeholder='ваш пароль' className='input-auth' onChange={setPasswordUser}/>
+            <input type="text" placeholder='Ваше имя' className='input-auth' onChange={setLoginUser}/>
+          
+          <div className="passw-input"> <input 
+        type={passwordVisible ? 'text' : 'password'} 
+        value={password} 
+        placeholder="Ваш пароль" 
+        onChange={(e) => setPassword(e.target.value)} 
+        className="input-auth" 
+      />
+      <img 
+        src={passwordVisible ? closedEye : openEye } 
+        alt="eye-icon" 
+        onClick={togglePasswordVisibility} 
+        style={{cursor: 'pointer', height: '30px'}}  
+        className='img-eye'
+      />
+      </div> 
+            {/* <input type="password" placeholder='Ваш пароль' className='input-auth' onChange={setPasswordUser}/> */}
             <input type="submit" value='войти' className='btn-auth'/>
           </form>
           <div className="relink-reg">
-          У вас нет <span className='span-login'>  
+          Еще нет аккаунта? <span className='span-login'>  
           <a href="/register" className='span-llogin'>
-            аккаунта
+          Зарегистрироваться
+            </a>
+            </span> 
+        
+          </div>
+          <div className="relink-create-akk">
+          Забыли пароль? <span className='span-login'>  
+          <a href="/" className='span-llogin'>
+          Восстановить
             </a>
             </span> 
         
           </div>
         </div>
       </div>
+      <div className="bg-elem">
+        ОРТ <span>мастер</span>
+      </div>
       <div className="img-container-auth">
+        <img src="./src/assets/auth/person.svg" alt="" />
+      </div>
       </div>
     </div>
     </>

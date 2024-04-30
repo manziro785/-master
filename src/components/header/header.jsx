@@ -82,7 +82,7 @@ export function Header() {
             <div className="btns-header">
               <a href="/lessons"className="test-btn-header" style={{cursor:'pointer'}}>Тесты</a>
               <a href="/profile" className="reg-btn-header">Профиль</a>
-              <a href="/" onClick={logout}className="login-btn-header">Выйти</a>
+              <a href="/" onClick={logout}className="login-btn-header" style={{marginRight:'0'}}>Выйти</a>
             </div>
               )}
         </div>

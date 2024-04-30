@@ -31,6 +31,7 @@ export default function UserInfo() {
 
     const openModal = () => {
         setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
         const storedUser = localStorage.getItem('user');
         if (storedUser) {
             const parsedUser = JSON.parse(storedUser);
@@ -42,6 +43,7 @@ export default function UserInfo() {
     };
     const closeModal = () => {
         setIsModalOpen(false);
+        document.body.style.overflow = '';
     };
 
     const handleInputChange = (e) => {
@@ -111,6 +113,10 @@ export default function UserInfo() {
             setUser(JSON.parse(storedUser));
         }
     }, [setUser]);
+
+
+    
+
     return (
         <>
             <div className="user-info-box">

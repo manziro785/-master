@@ -26,7 +26,9 @@ export function ProfilePage() {
       
     return (
         <>
-           <div className="header">
+           <div className="header-wrapper">
+            <div className="container">
+                <div className="header">
                 <NavLink to='/' className="logo">
                     <img src={logomain} alt="" className="logo-main" />
                 </NavLink>
@@ -34,17 +36,14 @@ export function ProfilePage() {
                     <div className="custom-tooltip">
                         <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
                         <div className="tooltiptext">
-                            {/* <NavLink to='/profile'>
-                                <button className="sign-up">
-                                    Профиль
-                                </button>
-                            </NavLink> */}
                             <NavLink to='/'>
                                 <button onClick={logout} className="log-in">
                                     Выйти
                                 </button>
                             </NavLink>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
