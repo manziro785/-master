@@ -17,10 +17,10 @@ export function ProfilePage() {
     const [user, setUser] = React.useContext(UserContext)
 
     function logout(event) {
-        const navigate = useNavigate(); // Используем хук useNavigate для навигации
-        setIsAuth(false); // Устанавливаем isAuth в false
-        localStorage.removeItem('access'); // Удаляем токен доступа из localStorage
-        localStorage.removeItem('refresh'); // Удаляем токен обновления из localStorage
+        // const navigate = useNavigate(); 
+        // setIsAuth(false); 
+        // localStorage.removeItem('access'); 
+        // localStorage.removeItem('refresh'); 
         navigate('/'); // Перенаправляем пользователя на главную страницу
       }
       

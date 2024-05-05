@@ -1,9 +1,11 @@
 import React from 'react'
 import './userMainInfoModule.css'
 import { UserContext } from '../../../App'
+import { AuthContext } from '../../../App'
 
 
 export default function UserMainInfo() {
+    const [isAuth, setIsAuth] = React.useContext(AuthContext)
     const [user, setUser] = React.useContext(UserContext)
     console.log(user)
 
@@ -43,6 +45,7 @@ export default function UserMainInfo() {
                                 </div>
                                 <div className="nickname-info">
                                     {user.age || "не указано"}
+                                    {user.id || "не указано"}
                                     {/* 10 ноября 2006 */}
                                 </div>
                             </div>

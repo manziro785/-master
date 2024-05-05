@@ -30,7 +30,9 @@ const [isAuth, setIsAuth] = React.useContext(AuthContext)
 
 async function sendData(event) {
   event.preventDefault()
-  let res = axios.post('http://217.151.230.35:888/api/v1/regauth/login/', {
+  // let res = axios.post('http://217.151.230.35:888/api/v1/regauth/login/', {
+  let res = axios.post('http://217.151.230.35:545/api/v1/regauth/login/', {
+
     username: login  ,
     password: password
   })
