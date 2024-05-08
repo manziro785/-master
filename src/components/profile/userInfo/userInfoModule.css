@@ -1,14 +1,21 @@
 .user-info-box {
-    width: 765px;
-    min-height: 940px;
+    /* width: 765px; */
+    min-height: 700px;
     background-color: #4699FF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
     position: relative;
-    margin-left: 110px;
+    /* margin-left: 110px; */
+    box-sizing:border-box;
     margin-top: 90px;
     border-radius:20px;
     margin-bottom: 50px;
     
+}
+.container-profile {
+    margin: 0 auto;
+    max-width: 1950px;
+    padding: 0 60px;
+    box-sizing: border-box;
 }
 .header-user-info {
     color: #ffff;
@@ -50,6 +57,10 @@ margin-top: 25px;
 
 .wrapper-userinfo {
     background-color: rgb(96, 142, 183)
+}
+.user-information {
+    display: flex;
+    justify-content: space-between;
 }
 
 .modal {

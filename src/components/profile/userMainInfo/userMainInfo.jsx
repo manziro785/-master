@@ -18,10 +18,7 @@ export default function UserMainInfo() {
                     <div className="nickname" style={{ marginLeft: '30px' }}>
 
                     </div>
-                    <div className="nickname-info1">
-                        {/* Akbar <br />Rysbekov */}
-                        {user.username}
-                    </div>
+                    
                 </div>
 
                 <div className="personal-box">
@@ -34,49 +31,46 @@ export default function UserMainInfo() {
                                 <div className="nickname">
                                     Email
                                 </div>
-                                <div className="nickname-info" style={{ marginLeft: '82px' }}>
+                                <div className="nickname-info" >
                                     {user.email}
-                                    {/* manziro785@gmail.com */}
                                 </div>
                             </div>
+
                             <div className="nickname-box">
-                                <div className="nickname" style={{ marginLeft: '80px' }}>
+                                <div className="nickname" >
                                     Date of birth
                                 </div>
                                 <div className="nickname-info">
                                     {user.age || "не указано"}
-                                    {user.id || "не указано"}
-                                    {/* 10 ноября 2006 */}
                                 </div>
                             </div>
+
                         </div>
                         <div className="right-user-info">
-                            <div className="nickname-box">
+                            <div className="nickname-box2">
                                 <div className="nickname">
                                     Location
                                 </div>
-                                <div className="nickname-info" style={{ marginLeft: '45px' }}>
-                                    {user.location || "не указано"}
-                                    {/* Бишкек, Чуйская обл. */}
+                                <div className="nickname-info" >
+                                    {user.location_country || "не указано"}
+                                </div>
+                            </div>
+
+                            <div className="nickname-box2">
+                                <div className="nickname">
+                                    School
+                                </div>
+                                <div className="nickname-info" >
+                                    {user.school || "не указано"}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="wrapper-bio-userinfo">
-                    <div className="nickname-box-bio">
-                        <div className="nickname-bio">
-                            Bio
-                        </div>
-                        <div className="nickname-info-bio">
-                            {user.bio || "не указано"}
-                            {/* Я учусь в колледже Ала-Too,
-мне нужно сдать ОРТ для того чтобы поступить в хороший уник */}
-                        </div>
-                    </div>
-                </div>
+               
             </div>
+           
         </>
     )
 }

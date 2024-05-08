@@ -47,18 +47,11 @@ export function ProfilePage() {
                     </div>
                 </div>
             </div>
-            <div className="main-wrapper-profile">
-                <div className="left-wrapper-profile">
-                    <UserInfo/>
-                    {/* <Awards/> */}
-                    {/* <img src="./src/assets/profile/Frame 43.svg" alt="" className='dostizh' /> */}
-                </div>
-                <div className="right-wrapper-profile">
-                    {/* <Active/> */}
-                    <img src="./src/assets/common/activity.svg" alt="" className='dostizh1' />
 
-                </div>
-            </div>
+            {/* <div className="main-wrapper-profile"> */}
+                    <UserInfo/>
+                   
+            {/* </div> */}
 
         </>
     )

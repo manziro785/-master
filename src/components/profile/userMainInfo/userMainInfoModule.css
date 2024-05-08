@@ -1,34 +1,36 @@
 .nickname {
-    width: 150px;
-    color: #fefefE;
+    /* width: 150px; */
+    color: #f2eeee;
     font-size: 23px;
     font-weight: 400;
-    text-align: right;
+    text-align: left;
     /* margin-left: 38px; */
 }
-.nickname-info,.nickname-info1, .nickname-info-bio {
+
+.nickname-info {
     font-size: 23px;
     color: #ffff;
-    margin-left: 87px;
     font-weight: 500;
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    text-align: left;
 
 }
-.left-user-info {
-    margin-left: -25px;
-}
-.nickname-info1 {
-    font-size: 35px;
+
+.nickname-info-bio {
+    width: 1200px;
+    max-width: 1200px;
+    font-size: 23px;
     color: #ffff;
-    margin-left: 60px;
-    margin-top: -130px;
-    font-weight: 600;
+    font-weight: 500;
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    text-align: left;
+
 }
+
 
 .red-text {
     color: #b3b3b3;
@@ -39,10 +41,19 @@
     display: flex;
     flex-direction: column;
 }
-.nickname-box {
+
+.nickname-box,
+.nickname-box2 {
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
 }
+
+.nickname-box2 {
+    margin-left: 140px;
+
+}
+
 /* .nickname-info::after, .red-text::after {
     display: block;
     content: '';
@@ -53,39 +64,40 @@
 
 
 } */
-.nickname-box, .nickname-box1, .nickname-box-bio {
+.nickname-box,
+.nickname-box1,
+.nickname-box2,
+.nickname-box-bio {
     display: flex;
     margin-bottom: 30px;
     position: relative;
 }
-.personal-box, .wrapper-box-user {
+
+.personal-box,
+.wrapper-box-user {
     display: flex;
     /* flex-direction: column; */
 }
+
 .personal-box {
     flex-direction: column;
     border-radius: 24px;
     border: 1px solid #ffff;
     margin: 0 25px;
+    min-width: 580px;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 60px;
+    margin-top: -10px;
 }
+
 .title-userinfo {
     font-size: 32px;
     font-weight: 700;
     color: #ffff;
-    margin-left: 50px;
-    margin-top: 25px;
+    margin: 15px 50px 15px 30px;
 }
-/* .nickname-info-bio::after {
-    display: block;
-    content: '';
-    width: 636px;
-    height: 1px;
-    background-color: #87AFC9;
-    margin-top: 32px;
-    position: absolute;
-    left: 58px;
-    bottom: -100px;
-} */
 
 #text {
     width: 100px;
@@ -94,14 +106,16 @@
 .wrapper-bio-userinfo {
     border-radius: 24px;
     border: 1px solid #ffff;
-    margin: 40px 25px;
+    margin: 40px 60px;
     padding-bottom: 40px;
 
 }
+
 .nickname-box-bio {
     display: flex;
     flex-direction: column;
 }
+
 .nickname-bio {
     font-size: 32px;
     font-weight: 700;
@@ -112,7 +126,7 @@
 }
 
 .nickname-info-bio {
-    max-width: 500px;
+    max-width: 1200px;
     margin-left: 58px;
     margin-top: 24px;
 }

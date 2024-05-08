@@ -34,12 +34,19 @@
 }
 .img-avatar-profile {
     display: flex;
-    margin-left: 88px;
+    margin-left: 60px;
+    margin-right: 20px;
+    position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 .avatar-profile{
     display: flex;
     margin-top: 20px;
+    /* width: fit-content; */
+    max-width: 500px;
     margin-bottom: 44px;
+    height: fit-content;
 }
 .btns-img-profile {
     width: fit-content;
@@ -47,4 +54,56 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 30px;
+}
+
+.photo-profile {
+    display: block;
+    /* width: 100%; */
+    width: 234px;
+    height: 234px;
+    transition: all 0.3s ease; 
+  }
+  .photo-profile:hover {
+    filter: blur(100px);
+  }
+  .overlayy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 42px
+  }
+
+  .overlayy:hover {
+    opacity: 1;
+  }
+  .pencil-icon {
+    width: 100px;
+  }
+
+  .nickname-info1, .nickname-avatar {
+    font-size: 40px;
+    color: #ffff;
+    margin-top: 20px; 
+    font-weight: 700;
+    height: fit-content;
+    max-width: 400px;
+    display: flex;
+    margin-right: -80px;
+    flex-direction: column;
+    text-align: left;
+}
+.nickname-avatar {
+    font-size: 36px;
+    color: #dedede;
+    font-weight: 500;
+
 }

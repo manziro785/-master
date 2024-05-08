@@ -10,3 +10,10 @@
     margin-left: 90px;
 
 }
+
+.main-wrapper-profile {
+    margin: 0 auto;
+    max-width: 1950px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}

@@ -1,29 +1,37 @@
-import React, {useEffect, useState} from 'react';
-import './userInfoModule.css'
-import Avatar from '../avatar/avatar.jsx'
-import UserMainInfo from '../userMainInfo/userMainInfo.jsx'
-import {UserContext} from '../../../App'
+import React, { useEffect, useState } from 'react';
+import './userInfoModule.css';
+import Avatar from '../avatar/avatar.jsx';
+import UserMainInfo from '../userMainInfo/userMainInfo.jsx';
+import { UserContext } from '../../../App';
 import { AuthContext } from '../../../App';
 import axios from 'axios';
 
-
 export default function UserInfo() {
-
-    const [isAuth, setIsAuth] = React.useContext(AuthContext)
-    const [user, setUser] = React.useContext(UserContext)
-
+    const [isAuth, setIsAuth] = React.useContext(AuthContext);
+    const [user, setUser] = React.useContext(UserContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [editableUser, setEditableUser] = useState(null);
     const [editedUser, setEditedUser] = useState({
         username: '',
         age: '',
-        location: '',
-        bio: ''
+        location_country: '',
+        bio: '',
+        email: ''
     });
+
+    useEffect(() => {
+        setEditedUser({
+            username: user.username,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            age: user.age,
+            location_country: user.location_country,
+            about_you: user.about_you,
+            email: user.email
+        });
+    }, [user]);
 
     const openModal = () => {
         setIsModalOpen(true);
-        setEditedUser(user); // Устанавливаем текущую информацию о пользователе в состояние для редактирования
     };
 
     const closeModal = () => {
@@ -38,22 +46,28 @@ export default function UserInfo() {
         }));
     };
 
-    const handleSaveChanges = async () => {
+    const handleSaveChanges = async (access) => {
         try {
-            // Отправляем измененные данные на сервер
-            const res = await axios.post(`http://217.151.230.35:545/api/v1/regauth/user/${user.id}/`, editedUser, {
-                headers: {
-                    Authorization: `Bearer ${isAuth.accessToken}`
-                }
+            let access_token = '';
+            if (localStorage.getItem('access')) {
+                access_token = localStorage.getItem('access')
+            }
+            axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}`;
+            const res = await axios.put(`http://217.151.230.35:545/api/v1/regauth/user-profile/`, editedUser, {
+                // headers: {
+                //             'Authorization' : `Bearer ${access}`
+                //         }
             });
-            setUser(res.data); // Обновляем информацию о пользователе в контексте
-            setIsModalOpen(false); // Закрываем модальное окно
+            setUser(res.data);
+            setIsModalOpen(false);
         } catch (error) {
             console.error(error);
         }
     };
+
     return (
         <>
+        <div className="container-profile">
             <div className="user-info-box">
                 <div className="header-user-info">
                     Профиль
@@ -61,11 +75,25 @@ export default function UserInfo() {
                         Изменить
                     </div>
                 </div>
-                <Avatar/>
-
-                <UserMainInfo/>
-
+                <div className="wrapper-container">
+                <div className="user-information">
+                <Avatar />
+                <UserMainInfo />
+                </div>
+                <div className="wrapper-bio-userinfo">
+                    <div className="nickname-box-bio">
+                        <div className="nickname-bio">
+                            Bio
+                        </div>
+                        <div className="nickname-info-bio">
+                            {user.about_you || "не указано"}
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
+            </div>
+
             {isModalOpen && (
                 <div className="modal-container">
                     <div className="modal">
@@ -99,8 +127,8 @@ export default function UserInfo() {
                                     <div className="nickname-info">
                                         <input
                                             type="text"
-                                            name="location"
-                                            value={editedUser.location}
+                                            name="location_country"
+                                            value={editedUser.location_country}
                                             onChange={handleInputChange}
                                         />
                                     </div>
@@ -110,8 +138,30 @@ export default function UserInfo() {
                                     <div className="nickname-info">
                                         <input
                                             type="text"
-                                            name="bio"
-                                            value={editedUser.bio}
+                                            name="about_you"
+                                            value={editedUser.about_you}
+                                            onChange={handleInputChange}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="nickname-box">
+                                    <div className="nickname">Имя</div>
+                                    <div className="nickname-info">
+                                        <input
+                                            type="text"
+                                            name="first_name"
+                                            value={editedUser.first_name}
+                                            onChange={handleInputChange}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="nickname-box">
+                                    <div className="nickname">Фамилия</div>
+                                    <div className="nickname-info">
+                                        <input
+                                            type="text"
+                                            name="last_name"
+                                            value={editedUser.last_name}
                                             onChange={handleInputChange}
                                         />
                                     </div>
@@ -120,6 +170,7 @@ export default function UserInfo() {
                         </div>
                     </div>
                 </div>
-            )}        </>
-    )
+            )}
+        </>
+    );
 }

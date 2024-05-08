@@ -37,11 +37,11 @@ async function sendData(event) {
     password: password
   })
   .then(response => {
-    console.log(response)
     setIsAuth(true)
     localStorage.setItem('access', response.data.access);
     localStorage.setItem('refresh', response.data.refresh);
-    navigate('/')
+      navigate('/')
+   
   })
   .catch(error => {
     console.log(error)
