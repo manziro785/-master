@@ -1,109 +1,125 @@
 .title-avatar-profile {
-    color: #CFCFCF;
-    font-size: 23px;
-    font-weight: 400;
-    margin-left: 130px;
+  color: #CFCFCF;
+  font-size: 23px;
+  font-weight: 400;
+  margin-left: 130px;
 }
+
 .change-img-profile {
-    color: #E2E2E2;
-    border: 1px solid #E2E2E2;
-    font-size: 21px;
-    padding: 7px 14px;
-    width: fit-content;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  color: #E2E2E2;
+  border: 1px solid #E2E2E2;
+  font-size: 21px;
+  padding: 7px 14px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
 }
+
 .change-img-profile:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 
 }
+
 .del-img-profile {
-    color: #B41A1A;
-    font-size: 21px;
-    cursor: pointer;
-    margin-top: 23px;
-    text-align: center;
-    transition: all 0.3s ease;
+  color: #B41A1A;
+  font-size: 21px;
+  cursor: pointer;
+  margin-top: 23px;
+  text-align: center;
+  transition: all 0.3s ease;
 
 }
+
 .del-img-profile:hover {
-    color: #d21d1d;
+  color: #d21d1d;
 
 }
+
 .img-avatar-profile {
-    display: flex;
-    margin-left: 60px;
-    margin-right: 20px;
-    position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   overflow: hidden;
+  width: 234px;
+  /* Ширина контейнера */
+  height: 234px;
+  /* Высота контейнера */
+  margin-left: 60px;
+  margin-right: 20px;
 }
-.avatar-profile{
-    display: flex;
-    margin-top: 20px;
-    /* width: fit-content; */
-    max-width: 500px;
-    margin-bottom: 44px;
-    height: fit-content;
+
+.avatar-profile {
+  display: flex;
+  margin-top: 20px;
+  /* width: fit-content; */
+  max-width: 500px;
+  margin-bottom: 44px;
+  height: fit-content;
 }
+
 .btns-img-profile {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 30px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
 }
 
 .photo-profile {
-    display: block;
-    /* width: 100%; */
-    width: 234px;
-    height: 234px;
-    transition: all 0.3s ease; 
-  }
-  .photo-profile:hover {
-    filter: blur(100px);
-  }
-  .overlayy {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    border-radius: 42px
-  }
-
-  .overlayy:hover {
-    opacity: 1;
-  }
-  .pencil-icon {
-    width: 100px;
-  }
-
-  .nickname-info1, .nickname-avatar {
-    font-size: 40px;
-    color: #ffff;
-    margin-top: 20px; 
-    font-weight: 700;
-    height: fit-content;
-    max-width: 400px;
-    display: flex;
-    margin-right: -80px;
-    flex-direction: column;
-    text-align: left;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  /* Для центрирования внутри flex-контейнера */
+  transition: all 0.3s ease;
 }
+
+.overlayy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 42px
+}
+
+.overlayy:hover {
+  opacity: 1;
+}
+
+.pencil-icon {
+  width: 100px;
+}
+
+.nickname-info1,
 .nickname-avatar {
-    font-size: 36px;
-    color: #dedede;
-    font-weight: 500;
+  font-size: 40px;
+  color: #ffff;
+  margin-top: 20px;
+  font-weight: 700;
+  height: fit-content;
+  max-width: 400px;
+  display: flex;
+  margin-right: -80px;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nickname-avatar {
+  font-size: 36px;
+  color: #dedede;
+  font-weight: 500;
 
 }

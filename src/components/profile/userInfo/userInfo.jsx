@@ -3,32 +3,20 @@ import './userInfoModule.css';
 import Avatar from '../avatar/avatar.jsx';
 import UserMainInfo from '../userMainInfo/userMainInfo.jsx';
 import { UserContext } from '../../../App';
+import { useContext } from 'react';
 import { AuthContext } from '../../../App';
 import axios from 'axios';
 
 export default function UserInfo() {
-    const [isAuth, setIsAuth] = React.useContext(AuthContext);
-    const [user, setUser] = React.useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [editedUser, setEditedUser] = useState({
-        username: '',
-        age: '',
-        location_country: '',
-        bio: '',
-        email: ''
+        username: user.username,
+        age: user.age,
+        location_country: user.location_country,
+        about_you: user.about_you,
+        email: user.email
     });
-
-    useEffect(() => {
-        setEditedUser({
-            username: user.username,
-            first_name: user.first_name,
-            last_name: user.last_name,
-            age: user.age,
-            location_country: user.location_country,
-            about_you: user.about_you,
-            email: user.email
-        });
-    }, [user]);
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -36,7 +24,7 @@ export default function UserInfo() {
 
     const closeModal = () => {
         setIsModalOpen(false);
-    };
+    }; 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -46,26 +34,15 @@ export default function UserInfo() {
         }));
     };
 
-    const handleSaveChanges = async (access) => {
+    const handleSaveChanges = async () => {
         try {
-            let access_token = '';
-            if (localStorage.getItem('access')) {
-                access_token = localStorage.getItem('access')
-            }
-            axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}`;
-            const res = await axios.put(`http://217.151.230.35:545/api/v1/regauth/user-profile/`, editedUser, {
-                // headers: {
-                //             'Authorization' : `Bearer ${access}`
-                //         }
-            });
+            const res = await axios.put(`http://217.151.230.35:545/api/v1/regauth/user-profile/`, editedUser);
             setUser(res.data);
             setIsModalOpen(false);
         } catch (error) {
             console.error(error);
         }
-    };
-
-    return (
+    };    return (
         <>
         <div className="container-profile">
             <div className="user-info-box">
@@ -168,7 +145,7 @@ export default function UserInfo() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             )}
         </>

@@ -38,7 +38,7 @@ export default function UserMainInfo() {
 
                             <div className="nickname-box">
                                 <div className="nickname" >
-                                    Date of birth
+                                    Years old
                                 </div>
                                 <div className="nickname-info">
                                     {user.age || "не указано"}

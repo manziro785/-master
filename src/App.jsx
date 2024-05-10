@@ -21,7 +21,6 @@ const App = () => {
       // console.log(access)
 
     axios.defaults.headers.common = {'Authorization': 'Bearer ' + access}
-      // let res = axios.post('http://217.151.230.35:888/api/v1/regauth/user-info/')
       let res = axios.get('http://217.151.230.35:545/api/v1/regauth/user-profile/')
 
     .then(response => {
