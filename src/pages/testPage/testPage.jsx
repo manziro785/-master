@@ -21,22 +21,16 @@ export function TestPage() {
 
     async function getData() {
         try {
-            // Получаем токен доступа из localStorage
             const accessToken = localStorage.getItem('access');
     
-            // Проверяем наличие токена доступа
             if (!accessToken) {
                 throw new Error('Токен доступа не найден');
             }
     
-            // Заголовки запроса с токеном доступа
             const headers = {
                 'Authorization': `Bearer ${accessToken}`
             };
-    
-            // Выполняем GET-запрос с использованием Axios
-            // const response = await axios.get('http://217.151.230.35:545/api/v1/lessons/', { headers });
-            const response = await axios.get('http://217.151.230.35:545/api/v1/lessons/');
+            const response = await axios.get('http://217.151.230.35:545/api/v1/subjects/', { headers });
             setLessions(response.data)
         } catch (error) {
             console.error('Ошибка при выполнении GET-запроса:', error.message);
@@ -51,22 +45,40 @@ export function TestPage() {
         navigate('/'); // Перенаправляем пользователя на главную страницу
     }
 
-    const card = lessions.map((card, index) => {
-        console.log(card)
+    // const card = lessions.map((card, index) => {
+    //     console.log(card)
+    //     return (
+    //         <NavLink to={`/lessons/${card.id}`}>
+    //             <button key={index} className='english-btn'>
+    //                 <span className='topic'>{card.name}</span>
+    //                 <span className='language'>{card.language}</span>
+    //                 <span className='time'>{card.time}</span>
+    //                 <span className='task'>{card.data} </span>
+    //             </button>
+    //         </NavLink>
+    //     )
+    // })
+
+    const card = lessions.map((card) => {
+        console.log(card); 
         return (
-            <NavLink to={`/lessons/${card.id}`}>
-                <button key={index} className='english-btn'>
-                    <span className='topic'>{card.name}</span>
-                    <span className='language'>{card.language}</span>
-                    <span className='time'>{card.time}</span>
-                    <span className='task'>{card.data} </span>
-                </button>
-            </NavLink>
+        <NavLink key={card.id} to={`/lessons/${card.id}`}>
+            <button className='english-btn'>
+                <span className='topic'>{card.name}</span>
+                <span className='language'>{card.language}</span>
+                <span className='time'>{card.time}</span>
+                <span className='task'>{card.data} </span>
+            </button>
+        </NavLink>
         )
-    })
+});
+        //     console.log(card)
+
 
     return (
         <>
+        <div className="header-wrapper">
+            <div className="container">
             <div className="header">
                 <NavLink to='/' className="logo">
                     <img src={logomain} alt="" className="logo-main" />
@@ -88,6 +100,8 @@ export function TestPage() {
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
             </div>
             <div className='tests'>
                 <h1 style={{ justifyContent: 'center', marginTop: '70px', marginBottom: '50px', fontSize: '50px', alignItems: 'center', display: "flex", fontWeight: '900' }}>Онлайн тесты</h1>

@@ -10,7 +10,11 @@
     margin-left: 90px;
 
 }
-
+.header-wrapp {
+    display: flex;
+    height: 80px;
+    align-items:center
+}
 .main-wrapper-profile {
     margin: 0 auto;
     max-width: 1950px;

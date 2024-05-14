@@ -75,7 +75,7 @@
 //     </>
 //   )
 // }
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import './avatarModule.css';
 import { UserContext } from '../../../App';
@@ -83,23 +83,30 @@ import { UserContext } from '../../../App';
 export default function Avatar() {
   const [user, setUser] = React.useContext(UserContext);
   const defaultAvatarUrl = './src/assets/profile/avatar.svg';
-  const [avatar, setAvatar] = useState(user.avatar ? `http://217.151.230.35:545${user.avatar}` : defaultAvatarUrl);
+  const [avatar, setAvatar] = useState(defaultAvatarUrl);
+  
+  useEffect(() => {
+    
+    setAvatar(user.avatar ? `http://217.151.230.35:545${user.avatar}` : defaultAvatarUrl)
+  }, [user])
+
+
 
   const handleAvatarChange = async (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
-
-    reader.onload = async () => {
-
+  
+    reader.onload = async () => {  
       const timestamp = Date.now(); // Генерация текущего времени
-  setAvatar(`${reader.result}?t=${timestamp}`); 
-
+      const newAvatarUrl = `${reader.result}?t=${timestamp}`;
+      setAvatar(newAvatarUrl); 
+  
       const formData = new FormData();
       formData.append('avatar', file);
       formData.append('username', user.username);
       formData.append('email', user.email);
       formData.append('location_country', user.location_country);
-
+  
       try {
         await axios.put(`http://217.151.230.35:545/api/v1/regauth/user-profile/`, formData, {
           headers: {
@@ -110,12 +117,12 @@ export default function Avatar() {
         console.error('Error uploading avatar:', error);
       }
     };
-
+  
     if (file) {
       reader.readAsDataURL(file);
     }
   };
-
+  
   return (
     <div className="avatar-profile">
       <label htmlFor="avatarInput" className="img-avatar-profile" style={{ backgroundImage: `url(${avatar})`, backgroundSize: 'cover',zIndex:'10', backgroundPosition: 'center', borderRadius: '43px' }}>
@@ -128,7 +135,7 @@ export default function Avatar() {
         id="avatarInput"
         accept="image/*"
         style={{ display: 'none' }}
-        onChange={handleAvatarChange}
+        onChange={handleAvatarChange}   
       />
       {/* <img src={`http://217.151.230.35:545/media/avatars/akbar_9R6iRR5.jpeg`} alt="sdsf"/> */}
 

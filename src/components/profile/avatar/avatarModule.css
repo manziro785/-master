@@ -44,7 +44,6 @@
   position: relative;
   overflow: hidden;
   width: 234px;
-  /* Ширина контейнера */
   height: 234px;
   /* Высота контейнера */
   margin-left: 60px;
@@ -55,7 +54,7 @@
   display: flex;
   margin-top: 20px;
   /* width: fit-content; */
-  max-width: 500px;
+  width: 700px ;
   margin-bottom: 44px;
   height: fit-content;
 }

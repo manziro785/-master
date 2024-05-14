@@ -8,16 +8,129 @@
     box-sizing:border-box;
     margin-top: 90px;
     border-radius:20px;
+    padding-bottom: 30px;
     margin-bottom: 50px;
     
 }
+.nickname-modal {
+    font-size: 16px;
+    color: #ffff;
+
+}
+.input-modal-pass {
+    padding-right: 60px;
+    width: 300px;
+}
+.img-eyee {
+    margin-top: 7px;
+    margin-left: -45px;
+}
+.input-modal {
+    background: none;
+    border: 2px solid #ffff;
+    border-radius: 8px;
+    height: 34px;
+    margin-top: 4px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #ffff;   
+    width: 260px;
+    margin-bottom: 0;
+}
+.input-modal-pass {
+    background: none;
+    border: 2px solid #ffff;
+    border-radius: 8px;
+    height: 34px;
+    margin-top: 4px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #ffff;   
+    width: 220px;
+    margin-bottom: 0;
+}
+.input-modal:focus, .input-modal-pass:focus, .input-bio:focus {
+    outline: none;
+}
+.nickname-box-modal {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.title-modal, .title-change-pass ,.title-bio-modal {
+    font-size: 30px;
+    color: #ffff;
+    font-weight: 600;
+    margin: 20px 0 25px 30px;
+}
+.personal-things {
+    border: 2px solid #ffff;
+    border-radius: 24px;
+    margin: 20px 40px 0 40px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    
+}
+.input-bio {
+    color: #ffff;   
+    width: 589px;
+    background:none;
+    font-size: 23px;
+    border:none;
+    outline: none;
+    margin-top: 0px;
+
+}
+.btn-pass {
+    font-size: 20px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 20px;
+    color: #dedede;
+    background:none;
+    border: 2px solid #dedede;
+    transition: all 0.2s ease;
+}
+.btn-pass:hover {
+    color: #ffff;
+    border: 2px solid #ffff;
+
+}
+.btn-submit-pass {
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+margin-bottom: 10px;
+}
+.nickname-info11 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+margin-top: 1px;
+}
+.change-pass-inputs {
+    display: flex;
+}
+.change-pass-cont {
+display: flex;
+}
+.close-modal-btn {
+    display: flex;
+    justify-content: right;
+    margin: 17px 30px 0 0;
+
+}
+.container-modal-personal {
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .container-profile {
     margin: 0 auto;
     max-width: 1950px;
     padding: 0 60px;
     box-sizing: border-box;
 }
-.header-user-info {
+.header-user-info, .header-user-info-premium {
     color: #ffff;
     font-size: 40px;
     font-style: normal;
@@ -26,6 +139,14 @@
     padding: 34px 50px;
     display: flex;
     flex-direction: column;
+}
+.header-user-info-premium {
+    background-color: #E05858;
+    font-weight: 900;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px 20px;
+
 }
 .btn-save {
 position: absolute;
@@ -46,14 +167,11 @@ transition: all 0.4s ease;
     background-color: #7450DA;
 
 }
-/* .header-user-info::after {
-    background-color : #87AFC9;
-    display: block;
-    content:'';
-    height: 1px;
-    width: 636px;
-margin-top: 25px;
-} */
+.img-box-awards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
 
 .wrapper-userinfo {
     background-color: rgb(96, 142, 183)
@@ -61,25 +179,48 @@ margin-top: 25px;
 .user-information {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .modal {
     position: fixed;
     z-index: 20;
+    border: 2px solid #000;
+    border-radius: 30px;
+    margin-top: 300px;
+    max-width: 750px;
     /* top: 15%; */
-    /* left: 30%; */
     /* position: relative; */
-    background-color: #2575d6; /* Цвет фона модального окна */
+    background-color: #4699FF; /* Цвет фона модального окна */
 }
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+.btn-save-changes-modal {
+    font-size: 25px;
+    padding: 10px 150px 10px 150px;
+    border-radius: 20px;
+    color: #000;
+    font-weight: 700;
+    background:none;
+    border: 3px solid #000;
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
 
-
+}
+.btn-save-modal {
+    display: flex;
+    justify-content: center;
+}
 .modal-container {
     position: fixed;
     top: 0;
+    overflow-y: auto;
+    
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.618); /* Чем ниже значение последнего числа, тем больше размытие */
+    background-color: rgba(0, 0, 0, 0.418);
     backdrop-filter: blur(3px); 
         display: flex;
     justify-content: center;

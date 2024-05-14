@@ -18,10 +18,11 @@
     box-sizing: border-box;
     text-align: center;
     position: relative;
+    transition: all 0.3s ease ;
 }
 
 .math-btn:hover, .english-btn:hover, .chemistry-btn:hover, .history-btn:hover, .russian-btn:hover, .physics-btn:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .math-btn {
@@ -31,6 +32,16 @@
 .english-btn {
     background-color: #71F486;
 }
+
+.english-btn:hover::before, .math-btn:hover::before, .history-btn:hover::before,.russian-btn:hover::before,.physics-btn:hover::before, .chemistry-btn:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Затемненный цвет фона */
+  }
 
 .chemistry-btn {
     background-color: #E0B548;

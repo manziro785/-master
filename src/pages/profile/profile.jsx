@@ -13,7 +13,6 @@ import usericon from "../../assets/header/userr.svg"
 
 export function ProfilePage() {
     const [isAuth, setIsAuth] = React.useContext(AuthContext)
-
     const [user, setUser] = React.useContext(UserContext)
 
     function logout(event) {
@@ -32,6 +31,8 @@ export function ProfilePage() {
                 <NavLink to='/' className="logo">
                     <img src={logomain} alt="" className="logo-main" />
                 </NavLink>
+                <div className="header-wrapp">
+                <a href="/lessons"className="test-btn-header" style={{cursor:'pointer', marginRight: '80px'}}>Тесты</a>
                 <div className="navbarr">
                     <div className="custom-tooltip">
                         <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
@@ -41,6 +42,7 @@ export function ProfilePage() {
                                     Выйти
                                 </button>
                             </NavLink>
+                        </div>
                         </div>
                         </div>
                     </div>

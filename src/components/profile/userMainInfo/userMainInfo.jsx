@@ -29,7 +29,7 @@ export default function UserMainInfo() {
 
                             <div className="nickname-box">
                                 <div className="nickname">
-                                    Email
+                                    Эмеил
                                 </div>
                                 <div className="nickname-info" >
                                     {user.email}
@@ -38,7 +38,7 @@ export default function UserMainInfo() {
 
                             <div className="nickname-box">
                                 <div className="nickname" >
-                                    Years old
+                                    Ваш возраст
                                 </div>
                                 <div className="nickname-info">
                                     {user.age || "не указано"}
@@ -49,7 +49,7 @@ export default function UserMainInfo() {
                         <div className="right-user-info">
                             <div className="nickname-box2">
                                 <div className="nickname">
-                                    Location
+                                    Ваш город 
                                 </div>
                                 <div className="nickname-info" >
                                     {user.location_country || "не указано"}
@@ -58,10 +58,11 @@ export default function UserMainInfo() {
 
                             <div className="nickname-box2">
                                 <div className="nickname">
-                                    School
+                                    Пароль
                                 </div>
                                 <div className="nickname-info" >
-                                    {user.school || "не указано"}
+                                    {/* {user.school || "не указано"} */}
+                                    ********
                                 </div>
                             </div>
                         </div>
