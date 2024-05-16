@@ -37,3 +37,50 @@
         color: #10e44c;
     }
     
+.title-nums {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+.table-nums {
+    width: 100px;
+    min-height: 70px;
+    border-radius: 12px;
+    border: 3px solid #4699FF;
+}
+.num-ans {
+    font-size: 24px;
+    border-top: 3px solid #4699FF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 0 2px 0;
+    height: 40px;
+}
+.table-your-ans, .table-corr-ans {
+    width: 500px;
+    min-height: 70px;
+    border-radius: 12px;
+    border: 3px solid #4699FF;
+}
+.table-your-ans {
+    margin: 0px 25px 0 25px;
+}
+.tables {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.conclution, .all-points {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.all-points {
+margin-top: 30px;
+margin-bottom: 100px;
+}

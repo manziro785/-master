@@ -110,9 +110,9 @@ useEffect(() => {
  // если добавить сюда эти штуки закоммиченные то работает изменеие данных но аватар нет
 
 useEffect(() => {
-    // if (!editedUser.username) {
+    if (!editedUser.username) {
       setEditedUser(user);
-    // }
+    }
   }, [user, editedUser]);
 
     return (
