@@ -7,6 +7,8 @@ import {ProfilePage}  from '../pages/profile/profile.jsx';
 import  {TestPage } from '../pages/testPage/testPage.jsx';
 import  {MathPage } from '../pages/lessons/math/math.jsx';
 import  {SolvingTest } from '../pages/solvingTest/solvingTest.jsx';
+import  {ResultPage}  from '../pages/resultPage/resultPage.jsx';
+
 import Tests from '../pages/Tests/Tests.jsx';
 
 
@@ -44,6 +46,10 @@ export const routers = createBrowserRouter([
   {
     path: '/lessons/:akbar/solve',
     element: <SolvingTest />
+  },
+  {
+    path: '/lessons/result',
+    element: <ResultPage />
   },
   {
     path: '/*',

@@ -1,0 +1,39 @@
+.subtitle-solve {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .timer_solve {
+        /* width: 199px; */
+        /* height: 116px; */
+        border-radius: 12px;
+        background-color: #EBEBEB;
+        border: 2px solid #4699FF;
+        padding: 10px 12px 10px 12px;
+        /* position: fixed; */
+        /* right: 80px; */
+        z-index: 1;
+    }
+    .grade-title-2, .grade-title-3, .grade-title-4, .grade-title-5 {
+        font-size: 36px;
+        font-weight: 800;
+    }
+    .your_mark {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .grade-title-2 {
+        color: #F14F4F;
+    }
+    .grade-title-3 {
+        color: #D0EF12;
+    }
+    .grade-title-4 {
+        color: #009CFF;
+    }
+    .grade-title-5 {
+        color: #10e44c;
+    }
+    

@@ -22,8 +22,9 @@ export  function HeaderGlobal() {
                     <img src={logomain} alt="" className="logo-main" />
                 </NavLink>
                 <div className="header-wrapp">
-                <a href="/lessons"className="test-btn-header" style={{cursor:'pointer', marginRight: '80px'}}>Тесты</a>
                 <div className="navbarr">
+                <a href="/lessons"className="test-btn-header" style={{cursor:'pointer', marginRight: '30px', height: 'fit-content'}}>Тесты</a>
+
                     <div className="custom-tooltip">
                         <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
                         <div className="tooltiptext">
