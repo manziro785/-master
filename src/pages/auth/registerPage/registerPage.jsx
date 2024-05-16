@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import '../authPage/authPageModule.css';
+import './registerPageModule.css';
 import { AuthContext } from '../../../App';
 import { useNavigate } from 'react-router-dom';
 
