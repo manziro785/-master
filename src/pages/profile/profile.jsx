@@ -8,6 +8,7 @@ import {UserContext} from '../../App'
 import {AuthContext} from '../../App';
 import logomain from '../../assets/header/logo (8).svg'
 import usericon from "../../assets/header/userr.svg"
+import { HeaderGlobal } from '../../components/headerGlobal/headerGlobal'
 
 
 
@@ -15,40 +16,10 @@ export function ProfilePage() {
     const [isAuth, setIsAuth] = React.useContext(AuthContext)
     const [user, setUser] = React.useContext(UserContext)
 
-    function logout(event) {
-        // const navigate = useNavigate(); 
-        // setIsAuth(false); 
-        // localStorage.removeItem('access'); 
-        // localStorage.removeItem('refresh'); 
-        navigate('/'); // Перенаправляем пользователя на главную страницу
-      }
-      
+
     return (
         <>
-           <div className="header-wrapper">
-            <div className="container">
-                <div className="header">
-                <NavLink to='/' className="logo">
-                    <img src={logomain} alt="" className="logo-main" />
-                </NavLink>
-                <div className="header-wrapp">
-                <a href="/lessons"className="test-btn-header" style={{cursor:'pointer', marginRight: '80px'}}>Тесты</a>
-                <div className="navbarr">
-                    <div className="custom-tooltip">
-                        <img src={usericon} alt="Mini Photo" className="mini-photo" id="person" />
-                        <div className="tooltiptext">
-                            <NavLink to='/'>
-                                <button onClick={logout} className="log-in">
-                                    Выйти
-                                </button>
-                            </NavLink>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+          <HeaderGlobal/>
 
             {/* <div className="main-wrapper-profile"> */}
                     <UserInfo/>

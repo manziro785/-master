@@ -62,13 +62,6 @@ function setPasswordUser (event) {
 }
 
 
-function logout(event) {
-  const navigate = useNavigate(); // Используем хук useNavigate для навигации
-  setIsAuth(false); // Устанавливаем isAuth в false
-  localStorage.removeItem('access'); // Удаляем токен доступа из localStorage
-  localStorage.removeItem('refresh'); // Удаляем токен обновления из localStorage
-  navigate('/'); // Перенаправляем пользователя на главную страницу
-}
 
 
 const [passwordVisible, setPasswordVisible] = useState(false);
